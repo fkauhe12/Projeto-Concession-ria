@@ -1,6 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
 
-
+@media screen and (min-width: 1300px) {
+    
+div {
+    border: 1px solid black;
+}
+    
+body {
+    margin: 0;
+    border: 0;
+    width: 100%;
+}
+    
 header {
     display: flex;
+    width: 100%;
 }
+          
+#menu {
+    width: 25%;
+
+}
+
+#logo {
+    width: 25%;
+}
+
+.logo1 {
+    width: 300px; 
+    height: 70px;
+    
+
+}
+
+#logo2 {
+    width: 25%;
+}
+
+.logo2 {
+    text-align: left;
+    font-family: "Rye", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 40px;
+}
+
+}
+
 
