@@ -32,6 +32,7 @@ header {
     font-weight: 400; 
     font-style: normal; 
     border-radius: 30px;
+    
 }
 
 a {
@@ -46,33 +47,31 @@ a:hover {
 }
 
 #menu {
-    display:grid;
+    display: grid;
     width: 25%;
 }
 
-menu {
-    display: none;
+#menu-itens {
+   
     justify-content: center;
     border: 1px solid black;
     padding: 10px;
    
 }
   
-menu ul {
+#menu-itens ul {
     display: block;
     list-style-type: none;
     padding: 0;
     border: 1px solid black;
 }
   
-menu ul li {
+#menu-itens ul li {
     padding: 10px ;
     border: 1px solid black;
 }
   
-#menu:hover menu {
-    display: block;
-}
+
 
 
 #logo {
