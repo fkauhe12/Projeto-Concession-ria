@@ -1,12 +1,7 @@
+//Funçao click Menu
 function clickMenu() {
-    let menu = document.getElementById("menu-itens");
-    if (menu.style.display === "block") {
-        menu.
-  
-style.display = "none";
-    } 
-else {
-        menu. 
-style.display = "block";
-    }
+    //Receber lista de itens Menu
+    let menuitens = document.getElementById("menu-itens");
+    //Aplicar classe active Menu 
+    menu.classList.toggle("active");
 }
