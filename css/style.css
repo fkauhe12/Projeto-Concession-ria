@@ -24,9 +24,10 @@ header {
 }
 
 .botao {
+   
     background-color: transparent;
     cursor:pointer;
-    font-size: 2vw;
+    font-size: 2.2vw;
     font-family: "Bungee Inline", sans-serif; 
     font-weight: 400; 
     font-style: normal; 
@@ -46,7 +47,6 @@ a:hover {
 
 #menu {
     display:grid;
-    justify-content: left;
     width: 25%;
 }
 
@@ -85,7 +85,7 @@ menu ul li {
 .logo1 {
    width: 50%;
    max-width: 300px;
-   height: 90%;
+   height: 15vh;
    background-image: url("../img/estaciologo1.png"); 
    background-repeat: no-repeat;
    background-size: contain;
