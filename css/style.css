@@ -82,14 +82,16 @@ span{
 }
   
 #menu-itens ul li {
-    padding: 10px ;
+    padding: 5% ;
     font-size: 3vw;
 }  
 
 #menu.active #menu-itens {
     display: block;
+    margin-top: 1%;
     border-radius: 30px;
     border: none;
+    backdrop-filter: blur(3px);
 }
 
 /*Logo*/
@@ -130,5 +132,44 @@ span{
     border-collapse: collapse;
 }
 
+/*Navegação de Veiculos*/
+
+nav{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 1%;
+}
+
+nav div{
+    width: 25%;
+    text-align: center;
+}
+
+.link-nav {
+    font-size: 2vw;
+    color: black;
+    cursor: pointer;
+    font-family: "Goblin One", serif;
+    font-weight: bolder;
+    font-style: normal;
+    user-select: none;
+    text-decoration: none;
+}
+
+.link-nav:hover{
+    font-family:"Nosifer", sans-serif;
+    color: red ;
+    transition: 0.4s;
+
+}
+
+.carrinho {
+    width: 25%;
+}
+
+.carrinho:hover{
+    width: 30%;
+}
 
 
