@@ -10,7 +10,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100vh;    
+    height: 100%;
    
 }
  
@@ -48,7 +48,7 @@ span{
 }
   
 .link-menu:hover {
-    color: gray;
+    color: rgb(112, 0, 249);
     font-size: 4vw;
 }
 
@@ -100,7 +100,7 @@ span{
 }
 
 .logo1 {
-    width: 15%;
+    width: 9vw;
     height: 15vh;
     background-image: url("../img/iconestacio.png"); 
     background-repeat: no-repeat;
@@ -111,7 +111,7 @@ span{
 
 .logo2{
     font-family:"Nosifer", sans-serif;
-    font-weight: 500; 
+    font-weight: bold; 
     font-size: 3vw;
     font-style: normal;
     user-select: none;
@@ -147,7 +147,6 @@ nav div{
     font-size: 2vw;
     color: black;
     cursor: pointer;
-    font-family: "Goblin One", serif;
     font-weight: bolder;
     font-style: normal;
     user-select: none;
@@ -173,15 +172,151 @@ nav div{
 
 /*login*/
 
-main {
-    position: relative;
+
+
+section {
+    width: 40%;
+    border-radius:30px ;
+    transition: 0.5s;
 }
 
-.login {
-    position: absolute;
-    top: 30px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    width: 20%;
-    height: 200px;
+section:hover{
+    backdrop-filter: blur(5px);
+}
+
+aside{
+    display: flex;
+    margin: 3% 0 0 4%;
+}
+
+.titulo-veiculo{
+    user-select: none;
+    text-align: center;
+    font-size: 3vw;
+    font-family: "Bungee Inline", sans-serif; 
+    font-weight: bolder;
+    transition: 0.4s;
+}
+
+.titulo-veiculo:hover {
+    color: red;
+}
+
+.descricao-veiculo {
+    user-select: none;
+    text-align: center;
+    font-family: "Bungee Inline", sans-serif; 
+    font-weight: bold;
+    font-size: 1.3vw;
+    transition: 0.4s;
+}
+
+.descricao-veiculo:hover {
+    color: red;
+}
+
+article {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    margin: 3% 0 0 7%;
+}
+
+.img-hilux {
+    background-image: url("../img/Toyota-Hilux-SW4-2023\ .jpg");
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 20px ;
+}
+
+footer {
+    display: flex;
+    background-color: black;
+    margin-top: 5%;
+    color: white;
+}
+
+ 
+footer div {
+    width: 25%;
+    margin: 2% 0 2% 0;
+    padding: 1%;
+} 
+
+#logo2  {
+    display: flex; 
+    width: 30%;
+}
+
+.logo3 {
+    background-image: url("../img/iconestacio.png"); 
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    border: none;
+}
+
+.logo4 {
+    font-family:"Nosifer", sans-serif;
+    font-size: 3vw;
+    font-style: normal;
+    user-select: none;
+}
+
+#link-footer ul {
+    display: flex;
+    flex-direction: column;
+    user-select: none ;
+    list-style: none;
+}
+
+
+.link-footer {
+    color: white;
+    font-size: 2vw; 
+    transition: 0.5s;
+}
+
+.link-footer:hover {
+    color: red; 
+    font-size: 3vw;
+}
+
+#midia {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link-what , .link-face , .link-twit , .link-insta {
+    color: white;
+    font-size: 4vw;
+    padding: 1vw;
+    transition: 0.6s;
+}
+
+.link-what:hover {
+    color: green;
+    font-size: 5vw;
+}
+
+.link-face:hover {
+    color: blue;
+    font-size: 5vw;
+}
+
+.link-twit:hover {
+    color: purple;
+    font-size: 5vw;
+}
+
+.link-insta:hover {
+    font-size: 5vw;
+    color: transparent;
+    background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+    background-clip: text;
+   
 }
