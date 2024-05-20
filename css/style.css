@@ -13,11 +13,7 @@ body {
     height: 100vh;    
    
 }
-/*Fundo da div Principal*/
-#principal {
-    
-}
-    
+ 
 /*Cabeçalho*/
 header {
     display: flex;
@@ -188,8 +184,4 @@ main {
     transform: translate(-50%, 0%);
     width: 20%;
     height: 200px;
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 9369216dcedbe96bf58e0bf3fccd1737dbe6c7fd
