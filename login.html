@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logoestacio.jpg" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <!--Menu-->
+        <div id="menu">
+            <!--Botão Menu-->
+            <div id="button-menu">
+                <span onclick="clickMenu()" >&#9776; Menu</span>
+            </div>
+            <!--Lista Menu-->
+            <div id="menu-itens">
+                <ul>     
+                    <li><a href="index.html" class="link-menu" >Home</a></li>
+                    <li><a href="#" class="link-menu" >Login</a></li>
+                    <li><a href="faleconosco.html" class="link-menu" >Fale Conosco</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!--Logo-->
+        <div id="logo">
+            <!--Logo icone1-->
+            <div class="logo1"></div>
+            <!--Logo texto2-->
+            <div class="logo2">Estacio Autos</div>
+        </div>
+        
+        <!--Login-->
+        <div id="login">
+        <!--Tiago-->    
+        </div>
+    
+    </header>
+    
+    <!--Linha Dividir Cabeçalho-->
+    <div class="linha"></div>   
+    
+    <main>
+        <div class="login">
+            <fieldset>
+                <legend><b>Login Vendedor</b></legend>
+                <br>
+                <div class="inputBox">
+                    <label for="email" class="inputLabel">E-mail</label><br>
+                    <input type="email" name="email" id="email" class="inputUser" required>
+                </div>
+                <br>
+                <div class="inputBox">
+                    <label for="senha" class="inputLabel">Senha</label><br>
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                </div>
+                <br>
+                <input type="submit" name="submit" id="submit">
+        </div>
+    </main>
+
+    <!--Java Script-->
+    <script src="js/script.js"></script>
+</body>
+</html>
