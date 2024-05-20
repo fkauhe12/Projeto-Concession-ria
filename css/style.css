@@ -6,15 +6,16 @@ body {
     margin: 0;
     border: 0;
     width: 100%;
-   
-}
-/*Fundo da div Principal*/
-#principal {
     background-image: url("../img/Carfundo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;    
+   
+}
+/*Fundo da div Principal*/
+#principal {
+    
 }
     
 /*Cabeçalho*/
@@ -154,6 +155,7 @@ nav div{
     font-weight: bolder;
     font-style: normal;
     user-select: none;
+    margin: 1%;
     text-decoration: none;
 }
 
@@ -166,10 +168,24 @@ nav div{
 
 .carrinho {
     width: 25%;
+    height: 4vw;
 }
 
 .carrinho:hover{
     width: 30%;
 }
 
+/*login*/
 
+main {
+    position: relative;
+}
+
+.login {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 20%;
+    height: 200px;
+}
