@@ -13,6 +13,7 @@ body {
     height: 100%;
    
 }
+
  
 /*Cabeçalho*/
 header {
@@ -236,21 +237,15 @@ article {
 }
 
 footer {
-    display: flex;
     background-color: black;
-    margin-top: 5%;
     color: white;
+    margin-top: 3%;
 }
 
- 
-footer div {
-    width: 25%;
-    margin: 2% 0 2% 0;
-    padding: 1%;
-} 
 
 #logo2  {
-    display: flex; 
+    display: flex;
+    align-items: center;
     width: 30%;
 }
 
@@ -259,7 +254,8 @@ footer div {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    border: none;
+    width: 50%;
+    height: 50%;
 }
 
 .logo4 {
@@ -269,9 +265,13 @@ footer div {
     user-select: none;
 }
 
-#link-footer ul {
+#link-footer {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+#link-footer ul li {
     user-select: none ;
     list-style: none;
 }
@@ -279,6 +279,7 @@ footer div {
 
 .link-footer {
     color: white;
+    text-decoration: none;
     font-size: 2vw; 
     transition: 0.5s;
 }
@@ -290,9 +291,16 @@ footer div {
 
 #midia {
     width: 40%;
+
+}
+
+#midia ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    user-select: none;
+    list-style: none;
+   
 }
 
 .link-what , .link-face , .link-twit , .link-insta {
@@ -322,4 +330,8 @@ footer div {
     color: transparent;
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     background-clip: text;  
+}
+
+#rodape1 {
+    display: flex;
 }
