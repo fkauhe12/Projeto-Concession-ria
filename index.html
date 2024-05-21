@@ -8,78 +8,79 @@
     <link rel="icon" href="img/logoestacio.jpg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/14e67e3ac1.js" crossorigin="anonymous"></script>
 </head>
-<body>  
-    <!--Cabeçalho--> 
-    <header>
-        <!--Menu-->
-        <div id="menu">
-            <!--Botão Menu-->
-            <div id="button-menu">
-                <span onclick="clickMenu()" >&#9776; Menu</span>
+<body> 
+    <main>
+        <!--Cabeçalho--> 
+        <header>
+            <!--Menu-->
+            <div id="menu">
+                <!--Botão Menu-->
+                <div id="button-menu">
+                    <span onclick="clickMenu()" >&#9776; Menu</span>
+                </div>
+                <!--Lista Menu-->
+                <div id="menu-itens">
+                    <ul>     
+                        <li><a href="index.html" class="link-menu" >Home</a></li>
+                        <li><a href="#" class="link-menu">Produto</a></li>
+                        <li><a href="login.html" class="link-menu" >Login</a></li>
+                        <li><a href="faleconosco.html" class="link-menu" >Fale Conosco</a></li>
+                    </ul>
+                </div>
             </div>
-            <!--Lista Menu-->
-            <div id="menu-itens">
-                <ul>     
-                    <li><a href="index.html" class="link-menu" >Home</a></li>
-                    <li><a href="#" class="link-menu">Produto</a></li>
-                    <li><a href="login.html" class="link-menu" >Login</a></li>
-                    <li><a href="faleconosco.html" class="link-menu" >Fale Conosco</a></li>
-                </ul>
+            
+            <!--Logo-->
+            <div id="logo">
+                <!--Logo icone1-->
+                <div class="logo1"></div>
+                <!--Logo texto2-->
+                <div class="logo2">Estacio Autos</div>
             </div>
-        </div>
             
-        <!--Logo-->
-        <div id="logo">
-            <!--Logo icone1-->
-            <div class="logo1"></div>
-            <!--Logo texto2-->
-            <div class="logo2">Estacio Autos</div>
-        </div>
-            
-        <!--Botão Login-->
-        <div id="login">
-        <!--Tiago-->    
-        </div>    
-    </header>
+            <!--Botão Login-->
+            <div id="login">
+            <!--Tiago-->    
+            </div>    
+        </header>
         
-    <!--Linha Dividir Cabeçalho-->
-    <div class="linha"></div>
+        <!--Linha Dividir Cabeçalho-->
+        <div class="linha"></div>
 
-    <!--Navegaçao Veiculos-->
-    <nav>
-        <div>
-            <a href="" class="link-nav">Suv</a>
-        </div>
-        <div>
-            <a href="" class="link-nav">Sedan</a>
-        </div>
-        <div>
-            <a href="" class="link-nav">Hatch</a>
-        </div>
-        <div>
-            <a href="" class="link-nav">Pick-up</a>
-        </div>
-        <div>
-            <a href="" class="link-nav">Esportivo</a>
-        </div>
-        <div>
-            <a href=""><img src="img/carrinhocompras.png" alt="carrinho" class="carrinho"></a>
-        </div>
-    </nav>
+        <!--Navegaçao Veiculos-->
+        <nav>
+            <div>
+                <a href="" class="link-nav">Suv</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Sedan</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Hatch</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Pick-up</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Esportivo</a>
+            </div>
+            <div>
+                <a href=""><img src="img/carrinhocompras.png" alt="carrinho" class="carrinho"></a>
+            </div>
+        </nav>
 
-    <!--Conteúdo-->
-    <aside>  
-        <!--Box esquerda informações-->
-        <section>
-            <div class="titulo-veiculo">Novidades</div>
-            <div class="descricao-veiculo">O Toyota Hilux SW4 é um SUV robusto e versátil, baseado na Pick-up Toyota Hilux. Reconhecido por sua durabilidade e confiabilidade, é ideal tanto para uso urbano quanto para aventuras off-road.Portanto,Além da sua robustez possui conforto e sofisticação de um SUV de alta gama, sendo uma escolha excelente para quem busca um veículo versátil e confiável.</div>
-        </section>
-        <!--Box direita imagens-->
-        <article>
-            <div class="img-hilux"></div>
-        </article>
-    </aside>
-
+        <!--Conteúdo-->
+        <aside>  
+            <!--Box esquerda informações-->
+            <section>
+                <div class="titulo-veiculo">Novidades</div>
+                <div class="descricao-veiculo">O Toyota Hilux SW4 é um SUV robusto e versátil, baseado na Pick-up Toyota Hilux. Reconhecido por sua durabilidade e confiabilidade, é ideal tanto para uso urbano quanto para aventuras off-road.Portanto,Além da sua robustez possui conforto e sofisticação de um SUV de alta gama, sendo uma escolha excelente para quem busca um veículo versátil e confiável.</div>
+            </section>
+            <!--Box direita imagens-->
+            <article>
+                <div class="img-hilux"></div>
+            </article>
+        </aside>
+    </main>
     <!--Ródape-->
     <footer>
         <div id="rodape1">
@@ -103,6 +104,16 @@
                     <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
                     <li></li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
                 </ul>
+            </div>
+        </div>
+        <div id="rodape2">
+            <ul>
+            <li>Condições para uso</li>
+            <li>Política de Privacidade</li>
+            <li>Anúncios baseados em interesses</li>
+            <li>Proteção de Dados no Brasil</li>
+            <li>Contrato de licença</li>
+            <li>© 2024 Estacio Autos</li>
             </div>
         </div>
     </footer>
