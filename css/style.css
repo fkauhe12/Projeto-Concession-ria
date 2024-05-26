@@ -1,6 +1,6 @@
 /*Importação de Fontes do Google*/
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Nosifer&family=Rye&display=swap');
-      
+
 /*Corpo*/
 body {
     margin: 0;
@@ -12,7 +12,7 @@ body {
     background-size: cover;
     height: 100%;
     display: flex;
-    flex-direction: column; 
+    flex-direction: column;
 }
  
 /*Cabeçalho*/
@@ -117,7 +117,12 @@ span{
     font-weight: bold; 
     font-size: 3vw;
     font-style: normal;
+    transition: 1s;
     user-select: none;
+}
+
+.logo2:hover {
+    color: red;
 }
 
 /*Login*/
@@ -237,6 +242,7 @@ article {
 }
 
 footer {
+    display:grid ;
     background-color: black;
     color: white;
     margin-top: 3%;
@@ -246,7 +252,6 @@ footer {
 #logo2  {
     display: flex;
     align-items: center;
-    width: 30%;
 }
 
 .logo3 {
@@ -254,8 +259,8 @@ footer {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    width: 50%;
-    height: 50%;
+    width: 100%;
+    height: 100%;
 }
 
 .logo4 {
@@ -267,8 +272,7 @@ footer {
 
 #link-footer {
     display: flex;
-    align-items: center;
-    width: 20%;
+    border: 1px solid white;
 }
 
 #link-footer ul li {
@@ -279,19 +283,20 @@ footer {
 
 .link-footer {
     color: white;
-    text-decoration: none;
-    font-size: 2vw; 
+    text-decoration: none;  
+    font-size: 2.4vw; 
     transition: 0.5s;
 }
 
 .link-footer:hover {
     color: red; 
-    font-size: 3vw;
+    font-size: 2.5vw;
 }
 
 #midia {
-    width: 40%;
-
+    display: flex;
+    align-items:center;
+    
 }
 
 #midia ul {
@@ -326,21 +331,25 @@ footer {
 }
 
 .link-insta:hover {
-    font-size: 5vw;
     color: transparent;
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
     background-clip: text;  
+    font-size: 5vw;
 }
 
 #rodape1 {
     display: flex;
-    margin: 3% 0 2% 0;
+    justify-content: space-between;
+    padding: 2%;
+
+    
 }
 #rodape2 ul {
     display: flex;
     justify-content: space-around;
     list-style: none;
     font-size: 0.8vw;
+    font-weight: bolder;
     cursor: default;
-    user-select: none;
+    user-select: none;   
 }
