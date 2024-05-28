@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacio Autos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logoestacio.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/14e67e3ac1.js" crossorigin="anonymous"></script>
+</head>
+<body> 
+    <main>
+        <!--Cabeçalho--> 
+        <header>
+            <!--Menu-->
+            <div id="menu">
+                <!--Botão Menu-->
+                <div id="button-menu">
+                    <span id="span-button" onclick="clickMenu()" >&#9776; Menu</span>
+                </div>
+                <!--Lista Menu-->
+                <div id="menu-itens">
+                    <ul>     
+                        <li><a href="index.html" class="link-menu" >Home</a></li>
+                        <li><a href="login.html" class="link-menu" >Login</a></li>
+                        <li><a href="faleconosco.html" class="link-menu" >Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!--Logo-->
+            <div id="logo">
+                <!--Logo icone1-->
+                <div class="logo1"></div>
+                <!--Logo texto2-->
+                <div class="logo2">Estacio Autos</div>
+            </div>
+            
+            <!--Botão Login-->
+            <div id="login">
+            <!--Tiago-->    
+            </div>    
+        </header>
+        
+        <!--Linha Dividir Cabeçalho-->
+        <div class="linha"></div>
+
+        <!--Navegaçao Veiculos-->
+        <nav>
+            <div>
+                <a href="" class="link-nav">Suv</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Sedan</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Hatch</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Pick-up</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Esportivo</a>
+            </div>
+            <div>
+                <a href=""><img src="img/carrinhocompras.png" alt="carrinho" class="carrinho"></a>
+            </div>
+        </nav>
+
+        <!--Fale Conosco-->
+        
+        <address><!--Conteudo-->    
+            <form class="form-conosco">
+                <div class="titulo-conosco">Fale Conosco</div>    
+                
+                <label>Nome</label>
+                <div class="input-conosco">
+                    <i class="fa-regular fa-circle-user" id="i"></i>
+                    <input type="text" name="nome" id="nome" placeholder="Username">
+                </div>
+                
+                <label>Email<span class="span-conosco">(obrigatório)</span></label>
+                <div class="input-conosco">
+                    <i class="fa-regular fa-envelope" id="i"></i>
+                    <input type="email" name="email" id="email" placeholder="Email">
+                </div>
+                
+                <label>Assunto<span class="span-conosco">(obrigatório)</span></label>
+                <div class="input-conosco">
+                    <i class="fa-regular fa-comment" id="i"></i>
+                    <select name="opcoes" id="opcoes">
+                        <option value="Selecione uma opção">Selecione uma opção</option>
+                        <option value="Sugestão">Sugestão</option>
+                        <option value="Elogio">Elogio</option>
+                        <option value="Reclamação">Reclamação</option>
+                    </select>
+                </div>
+                <label>Mensagem<span class="span-conosco">(obrigatório)</span></label>
+                <div class="input-conosco">
+                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Deixe a sua mensagem..."></textarea>
+                </div>
+                <div id="priv">
+                    <label id="acordos">Li e concordo com os termos da Aceite os termos e a Politica de Privacidade</label>
+                    <input type="checkbox" name="privacidade" id="privacidade">
+                </div>
+                <div id="priv">
+                    <label id="acordos">A Estacio Autos utilizará dados pessoais para receber e dar seguimento ao seu contato. Para mais informações sobre o tratamento de seus dados pessoais, consulte nosso <a href="" id="polit">Aviso de Privacidade</a>
+                    </label>
+                    <input type="checkbox" name="privacidade1" id="privacidade1">
+                </div>
+                <div class="but">
+                    <button>Enviar</button>
+                </div>
+            </form>    
+        </address>
+    </main>
+    <!--Ródape-->
+    <footer>
+        <div id="rodape1">
+            <div id="logo2">
+                <!-- Logo icone3 -->
+                <div class="logo3"></div>
+                <!-- Logo texto4 -->
+                <div class="logo4">Estacio Autos</div>
+            </div>
+            <div id="link-footer">
+                <ul>
+                    <li><a href="" class="link-footer">Home</a></li>
+                    <li><a href="" class="link-footer">Produto</a></li>
+                    <li><a href="" class="link-footer">Fale Conosco</a></li>
+                </ul>
+            </div>
+            <div id="midia">
+                <ul>
+                    <li><a href="https://www.whatsapp.com/" target="_blank" class="link-what"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" class="link-face"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="rodape2">
+            <ul>
+                <li>Condições para uso</li>
+                <li>Política de Privacidade</li>
+                <li>Proteção de Dados</li>
+                <li>Contrato de licença</li>
+                <li>© 2024 Estacio Autos</li>
+            </ul>
+        </div>
+    </footer>
+        
+     <!--Java Script-->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
