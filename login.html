@@ -3,42 +3,148 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-    <link rel="stylesheet" href="css/login.css">
+    <title>Estacio Autos</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/logoestacio.jpg" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/14e67e3ac1.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="principal">
-        <div class="content-box">
-            <div class="form-box">
-                <hr class="first"><h2>Login</h2><hr class="second">
-                    <form>
-                        <div class="input-box">
-                            <span>E-mail</span>
-                            <input type="email" placeholder="email@.com">
-                        </div>
+<body> 
+    <main>
+        <!--Cabeçalho--> 
+        <header>
+            <!--Menu-->
+            <div id="menu">
+                <!--Botão Menu-->
+                <div id="button-menu">
+                    <span id="span-button" onclick="clickMenu()" >&#9776; Menu</span>
+                </div>
+                <!--Lista Menu-->
+                <div id="menu-itens">
+                    <ul>     
+                        <li><a href="index.html" class="link-menu" >Home</a></li>
+                        <li><a href="login.html" class="link-menu" >Login</a></li>
+                        <li><a href="faleconosco.html" class="link-menu" >Fale Conosco</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!--Logo Principal-->
+            <div id="logo">
+                <!--Logo imgagem-->
+                <div class="logo1"></div>
+                <!--Logo texto-->
+                <div class="logo2">Estacio Autos</div>
+            </div>
+            
+            <!--Botão Login-->
+            <div id="login">
+            <!--Tiago-->    
+            </div>    
+        </header>
+        
+        <!--Linha Dividir Cabeçalho-->
+        <div class="linha"></div>
 
-                        <div class="input-box">
-                            <span>Senha</span>
-                            <input type="password" placeholder="Senha">
-                        </div>
+        <!--Navegaçao Veiculos-->
+        <nav>
+            <div>
+                <a href="" class="link-nav">Suv</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Sedan</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Hatch</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Pick-up</a>
+            </div>
+            <div>
+                <a href="" class="link-nav">Esportivo</a>
+            </div>
+            <div>
+                <a href=""><img src="img/carrinhocompras.png" alt="carrinho" class="carrinho"></a>
+            </div>
+        </nav>
 
-                        <div class="lembrar">
-                            <label>
-                                <input type="checkbox"> Lembrar de mim
-                            </label>
-                            <a href="#">Esqueceu a Senha?</a>
-                        </div>
+        <!--Conteúdo-->
+            <div class="content-box">
+                <div class="form-box">
+                    <h2>Login</h2><hr class="second">
+                        <form>
+                            <div class="input-box">
+                                <span>E-mail</span>
+                                <input type="email" placeholder="email@.com">
+                            </div>
+    
+                            <div class="input-box">
+                                <span>Senha</span>
+                                <input type="password" placeholder="Senha">
+                            </div>
+    
+                            <div class="lembrar">
+                                <label>
+                                    <input type="checkbox"> Lembrar de mim
+                                </label>
+                                <a href="#">Esqueceu a Senha?</a>
+                            </div>
+    
+                            <div class="input-box">
+                                <input type="submit" value="Entrar">
+                            </div>
+                                
+                            <div class="inscrever">
+                                <p>Não tem uma conta? <a href="##">Inscrever-se</a></p>
+                            </div>
+                        </form>
+                </div>
+            </div>
+    </main>
+    <!--Ródape-->
+    <footer>
+        <!--Rodapé parte 1-->
+        <div id="rodape1">
+            <div id="logo2">
+                <!-- Logo icone3 -->
+                <div class="logo3"></div>
+                <!-- Logo texto4 -->
+                <div class="logo4">Estacio Autos</div>
+            </div>
 
-                        <div class="input-box">
-                            <input type="submit" value="Entrar">
-                        </div>
-                            
-                        <div class="inscrever">
-                            <p>Não tem uma conta? <a href="##">Inscrever-se</a></p>
-                        </div>
-                    </form>
+            <!--Links Rodapé-->
+            <div id="link-footer">
+                <ul>
+                    <li><a href="" class="link-footer">Home</a></li>
+                    <li><a href="" class="link-footer">Produto</a></li>
+                    <li><a href="faleconosco.html" class="link-footer">Fale Conosco</a></li>
+                </ul>
+            </div>
+
+            <!--Midias-->
+            <div id="midia">
+                <ul>
+                    <li><a href="https://www.whatsapp.com/" target="_blank" class="link-what"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" class="link-face"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
             </div>
         </div>
-    </div>
+
+        <!--Rodapé parte 2-->
+        <div id="rodape2">
+            <ul>
+                <li>Condições para uso</li>
+                <li>Política de Privacidade</li>
+                <li>Proteção de Dados</li>
+                <li>Contrato de licença</li>
+                <li>© 2024 Estacio Autos</li>
+            </ul>
+        </div>
+    </footer>
+        
+     <!--Java Script-->
+    <script src="js/script.js"></script>
+
 </body>
 </html>
