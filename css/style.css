@@ -5,16 +5,18 @@
 body {
     margin: 0;
     border: 0;
-    width: 100%;
+    padding: 0;
+}
+
+/*Principal*/
+main {
     background-image: url("../img/Carfundo.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    padding-bottom: 2%;
 }
- 
+
 /*Cabeçalho*/
 header {
     display: flex;
@@ -24,77 +26,81 @@ header {
     
 }
 
-/*Menu*/
-span{
-    display: flex;
-    align-items: center;  
-    cursor: pointer;
-    font-family: "Bungee Inline", sans-serif; 
-    font-weight: 400; 
-    font-style: normal;
-    user-select: none;
-    font-size: 4vw;
-   
+/*Div Menu*/
+#menu {
+    display: grid;
+    width: 25%;
 }
 
-
-.link-menu {
-    cursor: pointer;
-    transition: 0.3s;
-    color: black;
-    text-decoration: none;
-    font-weight: bolder;
-    font-size: 2vw;
-    user-select: none;
-}
-  
-.link-menu:hover {
-    color: rgb(112, 0, 249);
-    font-size: 4vw;
-}
-
+/*Botão menu*/
 #button-menu {
-    display: flex;
-    height: 15vh;
-    max-height: 15vh;
-    width: auto;
-    
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 80% ;
+    height: 90%;
+
 } 
 
-#menu {
-    display: flex;
-    flex-direction: column;
-    width: 25%;
-    border: none;
-    
+/*Menu texto*/
+#span-button{ 
+    cursor: pointer;
+    font-family: "Rye";
+    user-select: none;
+    font-size: 4vw;
+    transition: 1s;
 }
 
+/*interação do Menu texto*/
+#span-button:hover {
+    color: red;
+}
+
+/*Links Menu*/
+.link-menu {
+    cursor: pointer;
+    transition: 0.8s;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 3vw;
+    user-select: none;
+}
+
+/*interação menu*/  
+.link-menu:hover {
+    color: cyan;
+    font-size: 3.4vw;
+}
+
+/*Esconder itens menu*/
 #menu-itens {
     display: none;
 }
 
-#menu-itens ul {
-    display: block;
-    list-style-type: none;
-    
-}
-  
+/*Tirar estilo do itens menu e distanciar*/
 #menu-itens ul li {
+    list-style-type: none;
     padding: 5% ;
-    font-size: 3vw;
 }  
 
+/*Exibição Menu sem alterar sua estrutura*/
+#menu.active {
+   display: block;
+}
+
+/*Estabilizar abertura de menu e o fundo*/
 #menu.active #menu-itens {
     display: block;
-    margin-top: 1%;
     width: 30vw;
-    border-radius: 30px;
+    border-radius: 20px;
     border: none;
-    backdrop-filter: blur(4px);
+    background-color: rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(6px);
     
 }
 
-/*Logo*/
+/*Div Logo Principal*/
 #logo {
     width: 50%;  
     display: flex;
@@ -102,6 +108,7 @@ span{
     align-items: center;
 }
 
+/*Imagem logo  Estacio principal*/
 .logo1 {
     width: 9vw;
     height: 15vh;
@@ -112,6 +119,7 @@ span{
     border: none;
 }
 
+/*Texto logo principal*/
 .logo2{
     font-family:"Nosifer", sans-serif;
     font-weight: bold; 
@@ -121,6 +129,7 @@ span{
     user-select: none;
 }
 
+/*Interação texto logo principal*/
 .logo2:hover {
     color: red;
 }
@@ -130,27 +139,29 @@ span{
     width: 25%;  
 }
 
+/*Fim Cabeçalho*/
+
 /*Linha*/
 .linha {
     width: auto;
     border: 2px solid black;
     border-collapse: collapse;
 }
-
+  
 /*Navegação de Veiculos*/
-
 nav{
     display: flex;
     align-items: center;
     width: 100%;
     margin-top: 1%;
 }
-
+/*Centralizar as div estalecer largura*/
 nav div{
     width: 25%;
     text-align: center;
 }
 
+/*Links de navegação*/
 .link-nav {
     font-size: 2vw;
     color: black;
@@ -162,6 +173,7 @@ nav div{
     text-decoration: none;
 }
 
+/*Interação dos links de navegação*/
 .link-nav:hover{
     font-family:"Nosifer", sans-serif;
     color: red ;
@@ -175,29 +187,33 @@ nav div{
     height: 4vw;
 }
 
+/*Interaçao carrinho*/
 .carrinho:hover{
     width: 30%;
 }
 
-/*login*/
+/*Fim da Navegação de Veiculos*/
 
-
-/*Conteúdo text*/
-section {
-    width: 40%;
-    border-radius:30px ;
-    transition: 0.5s;
-}
-
-section:hover{
-    backdrop-filter: blur(5px);
-}
-
+/*Conteúdo Principal*/
 aside{
     display: flex;
     margin: 3% 0 0 4%;
 }
 
+/*Conteudo esquerdo*/
+section {
+    width: 40%;
+    border-radius:20px ;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.80); 
+    transition: 0.5s;
+}
+/*Interação box esquerda*/
+section:hover{
+    backdrop-filter: blur(5px);
+}
+
+/*Título*/
 .titulo-veiculo{
     user-select: none;
     text-align: center;
@@ -207,24 +223,27 @@ aside{
     transition: 0.4s;
 }
 
+/*Interação com titulo*/
 .titulo-veiculo:hover {
     color: red;
 }
 
+/*Descrição Veiculo*/
 .descricao-veiculo {
     user-select: none;
     text-align: center;
     font-family: "Bungee Inline", sans-serif; 
-    font-weight: bold;
+    font-weight: lighter;
     font-size: 1.3vw;
     transition: 0.4s;
 }
 
+/*Interação com descrição*/
 .descricao-veiculo:hover {
     color: red;
 }
 
-/*Conteudo imagem*/
+/*Conteudo Direito*/
 article {
     display: flex;
     align-items: center;
@@ -232,6 +251,7 @@ article {
     margin: 3% 0 0 7%;
 }
 
+/*Imagem Hilux*/
 .img-hilux {
     background-image: url("../img/Toyota-Hilux-SW4-2023\ .jpg");
     width: 100%;
@@ -241,19 +261,30 @@ article {
     border-radius: 20px ;
 }
 
+/*Fim Conteudo*/
+
+/*Rodapé*/
 footer {
     display:grid ;
     background-color: black;
     color: white;
-    margin-top: 3%;
+    padding: 1% 0 1% 0;
 }
 
+/*Parte 1 Rodapé*/
+#rodape1 {
+    display: flex;
+    justify-content: space-between;
+    
+}
 
+/*Logo Secundaria Rodapé*/
 #logo2  {
     display: flex;
     align-items: center;
 }
 
+/*Imagem logo estacio 2*/
 .logo3 {
     background-image: url("../img/iconestacio.png"); 
     background-repeat: no-repeat;
@@ -263,6 +294,7 @@ footer {
     height: 100%;
 }
 
+/*Texto Logo estacio 2*/
 .logo4 {
     font-family:"Nosifer", sans-serif;
     font-size: 3vw;
@@ -270,35 +302,40 @@ footer {
     user-select: none;
 }
 
+/*Links Rodapé*/
 #link-footer {
     display: flex;
-    border: 1px solid white;
+    justify-content: center;
 }
 
+/*Tirar Estilo e seleção dos links*/
 #link-footer ul li {
     user-select: none ;
     list-style: none;
 }
 
-
+/*Decoração links */
 .link-footer {
     color: white;
     text-decoration: none;  
-    font-size: 2.4vw; 
+    font-size: 2.3vw; 
     transition: 0.5s;
 }
 
+/*Interação com links Rodapé*/
 .link-footer:hover {
     color: red; 
-    font-size: 2.5vw;
+    font-size: 2.4vw;
 }
 
+/*Midias*/
 #midia {
     display: flex;
     align-items:center;
     
 }
 
+/*Lista de Midia centralizar*/
 #midia ul {
     display: flex;
     justify-content: center;
@@ -308,6 +345,7 @@ footer {
    
 }
 
+/*link midia estilo*/
 .link-what , .link-face , .link-twit , .link-insta {
     color: white;
     font-size: 4vw;
@@ -315,21 +353,25 @@ footer {
     transition: 0.6s;
 }
 
+/*Interação link Whatsapp*/
 .link-what:hover {
     color: green;
     font-size: 5vw;
 }
 
+/*Interação link Facebook*/
 .link-face:hover {
     color: blue;
     font-size: 5vw;
 }
 
+/*Interação link twitter*/
 .link-twit:hover {
     color: purple;
     font-size: 5vw;
 }
 
+/*Interação link Insta*/
 .link-insta:hover {
     color: transparent;
     background: linear-gradient(45deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
@@ -337,13 +379,7 @@ footer {
     font-size: 5vw;
 }
 
-#rodape1 {
-    display: flex;
-    justify-content: space-between;
-    padding: 2%;
-
-    
-}
+/*Rodapé parte 2*/
 #rodape2 ul {
     display: flex;
     justify-content: space-around;
@@ -352,4 +388,148 @@ footer {
     font-weight: bolder;
     cursor: default;
     user-select: none;   
+}
+
+/*Login User*/
+.content-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 4% auto;
+    background-color: rgba(0, 0, 0, 0.80);   
+    border-radius: 20px;
+    height: 55vh;
+}
+.content-box .form-box h2{
+    color: white;
+    font-weight: 600;
+    font-size: 2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.content-box .form-box{
+    margin-bottom: 20px;
+}
+
+.content-box .form-box .input-box input{
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    font-weight: 400;
+    border: none;
+    font-size: 17px;
+    color: rgb(199, 199, 199);
+    background-color: rgb(41, 41, 41);
+    border-radius: 15px;
+}
+
+.content-box .form-box .input-box input::placeholder{
+    color: rgb(104, 104, 104);
+}
+
+.content-box .form-box .input-box span{
+    font-size: 17px;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+.content-box .form-box .lembrar{
+    font-size: 17px;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 400;
+    display: inline-block;
+}
+
+.content-box .form-box .input-box input[type=submite]{
+    background: rgb(104, 104, 104);
+    color: white;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.content-box .form-box .input-box input[type=submite]:hover{
+    background: rgb(130, 130, 130);
+}
+
+.content-box .form-box .lembrar{
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+}
+
+.content-box .form-box .lembrar a{
+    color: rgb(95, 143, 248);
+}
+.content-box .form-box .lembrar a:hover{
+    transition: 0.3s;
+    color: rgb(58, 94, 173);
+}
+
+
+.content-box .form-box .inscrever p{
+    color: white;
+}
+
+.content-box .form-box .inscrever p a{
+    color: rgb(95, 143, 248);
+}
+.content-box .form-box .inscrever p a:hover{
+    transition: 0.3s;
+    color: rgb(58, 94, 173);
+}
+
+.content-box .form-box .lembrar input[type=checkbox]{
+    border-radius: 5px;
+}
+
+/*Fale Conosco*/
+address{
+    display: flex;
+    width: 40%;
+    margin: 2% auto;
+    background-color: beige;
+    border-radius: 20px;
+    padding: 2%;
+    font-family: "poppins" ,sans-serif ;
+}
+
+.titulo-conosco {
+    text-align: center;
+    font-size: 4vw;
+    text-shadow: 0 0 4px blueviolet;
+}
+
+.input-conosco{
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    border: 2px #6f7e8a solid;
+    width: 100%;
+}
+
+.form-conosco label {
+    font-weight: bold;
+    font-size: 1.5vw;
+}
+
+.span-conosco {
+    font-weight: normal;
+}
+
+#i {
+    color: #fd5754;
+    font-size: 1.6vw;
+    padding: 5px;
 }
