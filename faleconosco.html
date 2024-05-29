@@ -21,9 +21,9 @@
                 <!--Lista Menu-->
                 <div id="menu-itens">
                     <ul>     
-                        <li><a href="index.html" class="link-menu" >Home</a></li>
-                        <li><a href="login.html" class="link-menu" >Login</a></li>
-                        <li><a href="faleconosco.html" class="link-menu" >Fale Conosco</a></li>
+                        <li><a href="index.html" class="link-menu" ><i class="fa-solid fa-house"></i> Home</a></li>
+                        <li><a href="login.html" class="link-menu" ><i class="fa-solid fa-circle-user"></i> Login</a></li>
+                        <li><a href="faleconosco.html" class="link-menu" ><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
                     </ul>
                 </div>
             </div>
@@ -38,8 +38,9 @@
             
             <!--Botão Login-->
             <div id="login">
-            <!--Tiago-->    
-            </div>    
+                <a href="login.html" class="link-login"><i class="fa-solid fa-circle-user"></i> Entre ou Cadastra-se</a>
+            </div>   
+
         </header>
         
         <!--Linha Dividir Cabeçalho-->
@@ -47,47 +48,36 @@
 
         <!--Navegaçao Veiculos-->
         <nav>
-            <div>
-                <a href="" class="link-nav">Suv</a>
-            </div>
-            <div>
-                <a href="" class="link-nav">Sedan</a>
-            </div>
-            <div>
-                <a href="" class="link-nav">Hatch</a>
-            </div>
-            <div>
-                <a href="" class="link-nav">Pick-up</a>
-            </div>
-            <div>
-                <a href="" class="link-nav">Esportivo</a>
-            </div>
-            <div>
-                <a href=""><img src="img/carrinhocompras.png" alt="carrinho" class="carrinho"></a>
-            </div>
+            <ul>
+                <li><a href="" class="link-nav">Suv</a></li>
+                <li><a href="" class="link-nav">Sedan</a></li>
+                <li><a href="" class="link-nav">Hatch</a></li>
+                <li><a href="" class="link-nav">Pick-up</a></li>
+                <li><a href="" class="link-nav">Esportivo</a></li>
+            </ul>
         </nav>
 
         <!--Fale Conosco-->
         
-        <address><!--Conteudo-->    
+        <address>   
             <form class="form-conosco">
                 <div class="titulo-conosco">Fale Conosco</div>    
                 
                 <label>Nome</label>
                 <div class="input-conosco">
-                    <i class="fa-regular fa-circle-user" id="i"></i>
-                    <input type="text" name="nome" id="nome" placeholder="Username">
+                    <i class="fa-regular fa-circle-user" id="i-conosco"></i>
+                    <input type="text" name="nome" id="nome" maxlength="20" placeholder="Username">
                 </div>
                 
                 <label>Email<span class="span-conosco">(obrigatório)</span></label>
                 <div class="input-conosco">
-                    <i class="fa-regular fa-envelope" id="i"></i>
-                    <input type="email" name="email" id="email" placeholder="Email">
+                    <i class="fa-regular fa-envelope" id="i-conosco"></i>
+                    <input type="email" name="email" id="email" maxlength="90" placeholder="Email">
                 </div>
                 
                 <label>Assunto<span class="span-conosco">(obrigatório)</span></label>
                 <div class="input-conosco">
-                    <i class="fa-regular fa-comment" id="i"></i>
+                    <i class="fa-regular fa-comment" id="i-conosco"></i>
                     <select name="opcoes" id="opcoes">
                         <option value="Selecione uma opção">Selecione uma opção</option>
                         <option value="Sugestão">Sugestão</option>
@@ -97,17 +87,17 @@
                 </div>
                 <label>Mensagem<span class="span-conosco">(obrigatório)</span></label>
                 <div class="input-conosco">
-                    <textarea name="mensagem" id="mensagem" cols="30" rows="10" placeholder="Deixe a sua mensagem..."></textarea>
+                    <textarea name="mensagem" id="mensagem" cols="60" rows="10" placeholder="Deixe a sua mensagem..."></textarea>
                 </div>
-                <div id="priv">
-                    <label id="acordos">Li e concordo com os termos da Aceite os termos e a Politica de Privacidade</label>
-                    <input type="checkbox" name="privacidade" id="privacidade">
+                <div id="priv-conosco">
+                    <div id="polit-conosco1">Li e concordo com os termos da Aceite os termos e a Politica de Privacidade
+                        <input type="checkbox" name="privacidade" id="privacidade">
+                    </div>
+                    <div id="polit-conosco2">A Estacio Autos utilizará dados pessoais para receber e dar seguimento ao seu contato. Para mais informações sobre o tratamento de seus dados pessoais, consulte nosso <a href="">Aviso de Privacidade</a>
+                        <input type="checkbox" name="privacidade1" id="privacidade1">
+                    </div>
                 </div>
-                <div id="priv">
-                    <label id="acordos">A Estacio Autos utilizará dados pessoais para receber e dar seguimento ao seu contato. Para mais informações sobre o tratamento de seus dados pessoais, consulte nosso <a href="" id="polit">Aviso de Privacidade</a>
-                    </label>
-                    <input type="checkbox" name="privacidade1" id="privacidade1">
-                </div>
+                
                 <div class="but">
                     <button>Enviar</button>
                 </div>
@@ -125,9 +115,8 @@
             </div>
             <div id="link-footer">
                 <ul>
-                    <li><a href="" class="link-footer">Home</a></li>
-                    <li><a href="" class="link-footer">Produto</a></li>
-                    <li><a href="" class="link-footer">Fale Conosco</a></li>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
                 </ul>
             </div>
             <div id="midia">
