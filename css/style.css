@@ -1,5 +1,5 @@
 /*Importação de Fontes do Google*/
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Nosifer&family=Rye&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Goblin+One&family=Nosifer&family=Rye&display=swap');
 
 /*Corpo*/
 body {
@@ -122,6 +122,7 @@ header {
 /*Texto logo principal*/
 .logo2{
     font-family:"Nosifer", sans-serif;
+    text-shadow: 0 0 5px #405de6;
     font-weight: bold; 
     font-size: 3vw;
     font-style: normal;
@@ -129,16 +130,26 @@ header {
     user-select: none;
 }
 
-/*Interação texto logo principal*/
-.logo2:hover {
-    color: red;
-}
-
 /*Login*/
 #login {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 25%;  
 }
+.link-login {
+    color: black;
+    text-shadow: 0 0 5px #833ab4;
+    font-size: 1.6vw;
+    font-weight: bolder;
+    font-family: "Montserrat", sans-serif;
+    text-decoration: none;
+    transition: 0.4s;
+}
 
+.link-login:hover {
+    color: #833ab4;
+}
 /*Fim Cabeçalho*/
 
 /*Linha*/
@@ -150,46 +161,38 @@ header {
   
 /*Navegação de Veiculos*/
 nav{
-    display: flex;
-    align-items: center;
     width: 100%;
-    margin-top: 1%;
 }
-/*Centralizar as div estalecer largura*/
-nav div{
-    width: 25%;
-    text-align: center;
+
+/*Alinhar navegação*/
+nav ul {
+    display: flex;
+    justify-content: space-around;
+}
+
+/*EStilo e decoração Navegação*/
+nav ul li {
+    list-style: none;
+    width: 15%;
 }
 
 /*Links de navegação*/
 .link-nav {
     font-size: 2vw;
     color: black;
+    font-family: "Rye";
     cursor: pointer;
-    font-weight: bolder;
+    font-weight: normal;
     font-style: normal;
     user-select: none;
-    margin: 1%;
     text-decoration: none;
+    transition: 0.6s;
 }
 
 /*Interação dos links de navegação*/
 .link-nav:hover{
-    font-family:"Nosifer", sans-serif;
+    font-weight: bolder;
     color: red ;
-    transition: 0.4s;
-
-}
-
-/*Carrinho de Compras*/
-.carrinho {
-    width: 25%;
-    height: 4vw;
-}
-
-/*Interaçao carrinho*/
-.carrinho:hover{
-    width: 30%;
 }
 
 /*Fim da Navegação de Veiculos*/
@@ -197,7 +200,9 @@ nav div{
 /*Conteúdo Principal*/
 aside{
     display: flex;
-    margin: 3% 0 0 4%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3%;
 }
 
 /*Conteudo esquerdo*/
@@ -207,10 +212,6 @@ section {
     color: white;
     background-color: rgba(0, 0, 0, 0.80); 
     transition: 0.5s;
-}
-/*Interação box esquerda*/
-section:hover{
-    backdrop-filter: blur(5px);
 }
 
 /*Título*/
@@ -246,18 +247,16 @@ section:hover{
 /*Conteudo Direito*/
 article {
     display: flex;
-    align-items: center;
     width: 50%;
-    margin: 3% 0 0 7%;
+    height: min-content;
+    margin-left:4%;
+    border-radius: 20px;
 }
 
 /*Imagem Hilux*/
 .img-hilux {
-    background-image: url("../img/Toyota-Hilux-SW4-2023\ .jpg");
     width: 100%;
     height: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
     border-radius: 20px ;
 }
 
@@ -302,13 +301,7 @@ footer {
     user-select: none;
 }
 
-/*Links Rodapé*/
-#link-footer {
-    display: flex;
-    justify-content: center;
-}
-
-/*Tirar Estilo e seleção dos links*/
+/*Link Rodapé e Tirar Estilo e seleção dos links*/
 #link-footer ul li {
     user-select: none ;
     list-style: none;
@@ -383,6 +376,7 @@ footer {
 #rodape2 ul {
     display: flex;
     justify-content: space-around;
+    margin-top: 2%;
     list-style: none;
     font-size: 0.8vw;
     font-weight: bolder;
@@ -391,7 +385,7 @@ footer {
 }
 
 /*Login User*/
-.content-box{
+.login-box{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,8 +394,10 @@ footer {
     background-color: rgba(0, 0, 0, 0.80);   
     border-radius: 20px;
     height: 55vh;
+    user-select: none;
 }
-.content-box .form-box h2{
+
+.login-box .form-box h2{
     color: white;
     font-weight: 600;
     font-size: 2em;
@@ -410,11 +406,11 @@ footer {
     text-align: center;
 }
 
-.content-box .form-box{
+.login-box .form-box{
     margin-bottom: 20px;
 }
 
-.content-box .form-box .input-box input{
+.login-box .form-box .input-box input{
     width: 100%;
     padding: 10px;
     outline: none;
@@ -426,26 +422,28 @@ footer {
     border-radius: 15px;
 }
 
-.content-box .form-box .input-box input::placeholder{
+.login-box .form-box .input-box input::placeholder{
     color: rgb(104, 104, 104);
 }
 
-.content-box .form-box .input-box span{
+.login-box .form-box .input-box span{
     font-size: 17px;
     color: white;
     margin-bottom: 5px;
     font-weight: 400;
+    
 }
 
-.content-box .form-box .lembrar{
+.login-box .form-box .lembrar{
     font-size: 17px;
     color: white;
     margin-bottom: 5px;
     font-weight: 400;
     display: inline-block;
+    
 }
 
-.content-box .form-box .input-box input[type=submite]{
+.login-box .form-box .input-box input[type=submite]{
     background: rgb(104, 104, 104);
     color: white;
     outline: none;
@@ -456,11 +454,11 @@ footer {
     transition: 0.3s;
 }
 
-.content-box .form-box .input-box input[type=submite]:hover{
+.login-box .form-box .input-box input[type=submite]:hover{
     background: rgb(130, 130, 130);
 }
 
-.content-box .form-box .lembrar{
+.login-box .form-box .lembrar{
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 14px;
@@ -469,67 +467,119 @@ footer {
     justify-content: space-between;
 }
 
-.content-box .form-box .lembrar a{
+.login-box .form-box .lembrar a{
     color: rgb(95, 143, 248);
 }
-.content-box .form-box .lembrar a:hover{
+.login-box .form-box .lembrar a:hover{
     transition: 0.3s;
     color: rgb(58, 94, 173);
 }
 
 
-.content-box .form-box .inscrever p{
+.login-box .form-box .inscrever p{
     color: white;
 }
 
-.content-box .form-box .inscrever p a{
+.login-box .form-box .inscrever p a{
     color: rgb(95, 143, 248);
+    
 }
-.content-box .form-box .inscrever p a:hover{
+.login-box .form-box .inscrever p a:hover{
     transition: 0.3s;
     color: rgb(58, 94, 173);
 }
 
-.content-box .form-box .lembrar input[type=checkbox]{
+.login-box .form-box .lembrar input[type=checkbox]{
     border-radius: 5px;
 }
 
 /*Fale Conosco*/
-address{
-    display: flex;
+address {
     width: 40%;
-    margin: 2% auto;
+    margin: 4% auto;
     background-color: beige;
     border-radius: 20px;
-    padding: 2%;
+    padding: 4%;
     font-family: "poppins" ,sans-serif ;
+    user-select: none;
 }
 
+/*Titulo do Fale conosco*/
 .titulo-conosco {
     text-align: center;
     font-size: 4vw;
     text-shadow: 0 0 4px blueviolet;
 }
 
-.input-conosco{
+/*Input Fale conosco Borda dos inputs*/
+.input-conosco {
     display: flex;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 25px;
     border: 2px #6f7e8a solid;
-    width: 100%;
+    padding: 2%;
 }
 
+/*Inputs dentro das bordas de texto e email */
+.input-conosco input {
+    width: 90%;   
+    border: none;
+    outline: none;
+    background-color: beige;
+}
+
+/*Input dentro das bordas seleção de problema ou elogio */
+.input-conosco select {
+    background-color: beige;
+    width: 90%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*Estilo das labels*/
 .form-conosco label {
     font-weight: bold;
     font-size: 1.5vw;
 }
 
+/*Input dentro das bordas de mensagem*/
+.input-conosco #mensagem {
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    resize: none;
+}
+
+/*Span Obrigatorio*/
 .span-conosco {
     font-weight: normal;
 }
 
-#i {
+/*icones dos inputs*/
+#i-conosco {
     color: #fd5754;
-    font-size: 1.6vw;
     padding: 5px;
+}
+
+/*termos de privacidade Fale conosco*/
+#priv-conosco {
+    margin-top: 2%;
+}
+/*Politica termos 2*/
+#polit-conosco2 {
+    margin-top: 2%;
+}
+
+/*Estilizar link termos 2*/
+#polit-conosco2 a {
+    color: black;
+}
+
+/*botão Fale Conosco*/
+.but {
+    margin-top: 3%;
+    text-align: center;
 }
