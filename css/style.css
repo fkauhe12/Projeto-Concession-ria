@@ -583,3 +583,79 @@ address {
     margin-top: 3%;
     text-align: center;
 }
+
+
+/*Estilização veículos Paulo Henrique */
+.body1{
+    background-image: url("../img/Carfundo.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+#veiculos-h1 {
+    display: flex;
+    justify-content: center;
+}
+
+  /*Véiculos suv*/
+#suv{
+    display: flex;
+    border: none;
+    user-select: none;
+    font-size: 3vw;
+    font-family: "Bungee Inline", sans-serif; 
+    font-weight: bolder;
+    transition: 0.4s;
+
+/*Véiculos suv Interação*/
+}
+#suv:hover {
+    color: red;
+}
+
+ /*ajuste tela*/
+*{
+padding: 0;
+margin: 0;
+box-sizing: border-box;
+font-family: "poppins",sans-serif;
+}
+
+#container-main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+/*div card*/
+.container{
+    width: 30%;
+    margin: 1%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow:  2px 5px 15px 2px black;  
+}
+
+       /*tamanho imagem dentro da Div*/
+img{
+    width: 300px;
+    height: 270px;    
+}
+/*texto card*/
+
+.container h1,h2{
+    text-align: center;
+    color: #405de6;
+}
+
+.container p{
+    margin-top: 10px;
+    padding: 0px 5px;
+    text-align: center;
+    color: #405de6;
+}
+.container h2{
+    margin-top: 10px;
+    padding: 0px 5px;
+}
