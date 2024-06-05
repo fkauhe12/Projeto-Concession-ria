@@ -8,7 +8,7 @@
     <link rel="icon" href="img/logoestacio.jpg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/14e67e3ac1.js" crossorigin="anonymous"></script>
 </head>
-<body id="body"> 
+<body> 
     <main>
         <!--Cabeçalho--> 
         <header>
@@ -28,131 +28,122 @@
                 </div>
             </div>
             
-           <!--Logo Principal-->
+            <!--Logo-->
             <div id="logo">
-                <!--Logo imgagem-->
+                <!--Logo icone1-->
                 <div class="logo1"></div>
-                <!--Logo texto-->
+                <!--Logo texto2-->
                 <div class="logo2">Estacio Autos</div>
             </div>
             
             <!--Botão Login-->
             <div id="login">
                 <a href="login.html" class="link-login"><i class="fa-solid fa-circle-user"></i> Entre ou Cadastra-se</a>
-            </div>    
+            </div>   
+
         </header>
+        
+        <!--Linha Dividir Cabeçalho-->
+        <div class="linha"></div>
+
         <!--Navegaçao Veiculos-->
         <nav>
             <ul>
-                <li><a href="Suv.html" class="link-nav">Suv</a></li>
+                <li><a href="suv.html" class="link-nav">Suv</a></li>
                 <li><a href="sedan.html" class="link-nav">Sedan</a></li>
                 <li><a href="hatch.html" class="link-nav">Hatch</a></li>
                 <li><a href="pickup.html" class="link-nav">Pick-up</a></li>
                 <li><a href="sport.html" class="link-nav">Esportivo</a></li>
             </ul>
         </nav>
-        <!--Linha Dividir Cabeçalho-->
-        <div class="linha"></div>
-        <br>
-        <br>
-        <div id="veiculos-h1">
-            <div id="suv">Veículos Suv</div>
+        <div id="titulo">Veículos SUV</div>
+        <div class="container">
+            <div class="card">
+                <img src="suv/honda_vermelho.jpg" alt="Honda Vermelho">
+                <div class="description">
+                    <h2>Honda HRV</h2>
+                    <p>Ano: 2023</p>
+                    <p>Cor: Vermelho</p>
+                    <p>Placa: ABC-1234</p>
+                    <p>Valor: $20,000</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="suv/jeep_preto2.jpg" alt="Jeep Preto">
+                <div class="description">
+                    <h2>Jeep Renegade</h2>
+                    <p>Ano: 2022</p>
+                    <p>Cor: Preto</p>
+                    <p>Placa: XYZ-5678</p>
+                    <p>Valor: $25,000</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="suv/hyundai_prata.jpg" alt="Hyundai Prata">
+                <div class="description">
+                    <h2>Hyundai IX35</h2>
+                    <p>Ano: 2024</p>
+                    <p>Cor: Prata</p>
+                    <p>Placa: DEF-9012</p>
+                    <p>Valor: $22,000</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="suv/hilux_preta.jpg" alt="Hilux Preta">
+                <div class="description">
+                    <h2>Toyota Hilux SW4</h2>
+                    <p>Ano: 2021</p>
+                    <p>Cor: Preta</p>
+                    <p>Placa: GHI-3456</p>
+                    <p>Valor: $30,000</p>
+                </div>
+            </div>
         </div>
-        <br>
-        <br>
-
-        <div id="container-main">
-            <!-- img card honda vermelho-->
-            <div class="container">
-                <span class="image"><img src="suv/honda_vermelho.jpg"></span> 
-                    <h1>Veículo:Honda HR</h1>
-                        <p>Carro muito seguro, confontável e <br> 
-                        economico, por um preço acessível</p>
-                        <h2>87.900 kms rodado<h2>
-                        <h2>Cor:vermelho ano:2012/2013</h2>
-                        <h2>placa:FQP0794</h2>
-                        <h2>Preço:R$ 115.000<h2>
-            </div>
-                        
-            <!-- card Jeep preto-->
-            <div class="container">
-                <span class="image"><img src="suv/jeep_preto2.jpg"></span>
-                <br>
-                    <h1>Veículo Jeep preto</h1>
-                        <p>Carro para todos os momentos<br> 
-                        desde a estrada, até trilhas</p>
-                        <h2>58.000 kms rodados<h2>
-                        <h2>Cor:preto ano:2017/2018</h2>
-                        <h2>placa:KYI8B18<h2></h2>
-                        <h2>Preço:R$ 140.000<h2>
-            </div>
-                    
-            <!-- card hyundai prata-->
-            <div class="container">
-                <span class="image"><img src="suv/hyundai_prata.jpg"></span>
-                <br>
-                    <h1>Hyundai Prata</h1>
-                        <p>Veículo econômico e altamente<br> 
-                        robusto e estiloso </p>
-                        <h2>62.000 kms rodados<h2>
-                        <h2>Cor:prata ano:2015/2016</h2>
-                        <h2>placa:OIH0A01<h2></h2>
-                        <h2>Preço:R$ 100.000<h2>
-            </div>
-
-            <div class="container">
-                <span class="image"><img src="suv/hilux_preta.jpg"></span>
-                <br>
-                    <h1>Hilux preta</h1>
-                    <p>Se você gosta de aventuras esse<br> 
-                    veículo é para você,muita força</p>
-                    <h2>45.000 kms rodados<h2>
-                    <h2>preto ano:2020/2021</h2>
-                    <h2>placa:FQP0794<h2></h2>
-                    <h2>Preço:R$ 306.000<h2>
-            </div>
-        </div>        
-           
+    </main>
     <!--Ródape-->
     <footer>
-      <!--Rodapé parte 1-->
-      <div id="rodape1">
-        <div id="logo2">
-              <!-- Logo icone3 -->
-              <div class="logo3"></div>
-              <!-- Logo -->
-              <div class="logo4">Estacio Autos</div>
-          </div>
+        <!--Rodapé parte 1-->
+        <div id="rodape1">
+            <div id="logo2">
+                <!-- Logo icone3 -->
+                <div class="logo3"></div>
+                <!-- Logo texto4 -->
+                <div class="logo4">Estacio Autos</div>
+            </div>
+            <!--Links Rodapé-->
+            <div id="link-footer">
+                <ul>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
+                </ul>
+            </div>
 
-          <!--Links Rodapé-->
-          <div id="link-footer">
-              <ul>
-                  <li><a href="index.html" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
-                  <li><a href="faleconosco.html" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
-              </ul>
-          </div>
+            <!--Midia Rodapé-->
+            <div id="midia">
+                <ul>
+                    <li><a href="https://www.whatsapp.com/" target="_blank" class="link-what"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" class="link-face"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
 
-          <!--Midias-->
-          <div id="midia">
-              <ul>
-                  <li><a href="https://www.whatsapp.com/" target="_blank" class="link-what"><i class="fa-brands fa-whatsapp"></i></a></li>
-                  <li><a href="https://www.facebook.com/" target="_blank" class="link-face"><i class="fa-brands fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
-              </ul>
-          </div>
-      </div>
+        <!--Rodapé parte 2-->
+        <div id="rodape2">
+            <ul>
+                <li>Condições para uso</li>
+                <li>Política de Privacidade</li>
+                <li>Proteção de Dados</li>
+                <li>Contrato de licença</li>
+                <li>© 2024 Estacio Autos</li>
+            </ul>
+        </div>
+    </footer>
+        
+     <!--Java Script-->
+    <script src="js/script.js"></script>
 
-      <!--Rodapé parte 2-->
-      <div id="rodape2">
-      <ul>
-              <li>Condições para uso</li>
-              <li>Política de Privacidade</li>
-              <li>Proteção de Dados</li>
-              <li>Contrato de licença</li>
-              <li>© 2024 Estacio Autos</li>
-          </ul>
-      </div>
-  </footer>
-      
-   <!--Java Script-->
+</body>
+</html>
