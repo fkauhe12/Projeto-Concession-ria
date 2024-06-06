@@ -6,6 +6,7 @@ body {
     margin: 0;
     border: 0;
     padding: 0;
+    
 }
 
 /*Principal*/
@@ -200,14 +201,16 @@ nav ul li {
 /*Conteúdo Principal*/
 aside{
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
-    margin-top: 3%;
+    margin-top: 6%;
+    
 }
 
 /*Conteudo esquerdo*/
 section {
     width: 40%;
+    height: 100%;
     border-radius:20px ;
     color: white;
     background-color: rgba(0, 0, 0, 0.80); 
@@ -248,9 +251,9 @@ section {
 article {
     display: flex;
     width: 50%;
-    height: min-content;
-    margin-left:4%;
+    height: 100%;
     border-radius: 20px;
+   
 }
 
 /*Imagem Hilux*/
@@ -268,6 +271,7 @@ footer {
     background-color: black;
     color: white;
     padding: 1% 0 1% 0;
+    
 }
 
 /*Parte 1 Rodapé*/
