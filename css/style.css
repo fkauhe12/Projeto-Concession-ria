@@ -586,55 +586,71 @@ address {
 
 
 /*Estilização veículos Paulo Henrique */
+/*Container de carros*/
 .container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: flex-start; /* Alinha os cards no topo */
-    height: 100vh;
-    padding: 20px;
+    justify-content: space-between;
+    height: 100%;
+    width: 100%;
+    padding: 2%;
     box-sizing: border-box;
-    width: 60%;
 }
-
-#titulo {
-text-align: center;
-margin-top: 3%;
-font-size: 3vw;
+/*Titulo do tipo de Veiculo*/
+#titulo_tipo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 3%;
 }
-
-#titulo:hover {
+/*Texto do titulo tipo de veiculo */
+#titulo_tipo div{
+    font-size: 3.3vw;
+    font-family: "poppins" ,sans-serif ;
+    font-weight: bolder;
+    transition: 0.7s;
+    text-shadow: 0 0 5px red ;
+}
+/*Interaçâo com texto titulo do tipo de veiculo*/
+#titulo_tipo div:hover {
     color: red; 
-    font-size: 3.1vw;   
+    font-size: 3.4vw;
 }
-    
+ 
+/*Cards dos carros*/
 .card {
-    width: calc(50% - 20px);
-    margin-bottom: 2%;
-    border: 1px solid #ccc;
+    width: 30%;
+    box-shadow: 0 0 10px white;
     border-radius: 10px;
-    overflow: hidden;
     transition: transform 0.3s;
+    background-color: rgba(0, 0, 0, 0.80);
+    margin-top: 2%;
+    cursor: pointer;
 }
-    
+ 
+/*Interaçâo com o card*/
 .card:hover {
     transform: translateY(-5px);
 }
-    
+
+/*Imagens dos cards*/
 .card img {
     width: 100%;
     height: 50%;
+    border-radius: 10px 10px 0 0;
     border-bottom: 1px solid #774949;
 }
-    
+ 
+/*Descriçâo dos cards*/
 .description {
-    padding: 10px;
-    text-align: center; /* Alinha o texto ao centro */
+    padding: 2%;
+    text-align: center;
 }
-    
+  
+/*Tirar margin e estilizar a descriçâo*/
 .description h2, .description p {
     margin: 0;
-    font-size: 20px; /* Diminui o tamanho da fonte */
-    color: yellow; /* Define a cor do texto como amarelo */
-    text-shadow: 0 0 5px #ff0; /* Adiciona um efeito de sombra amarela */
+    font-size: 2vw; 
+    color: yellow; 
+    text-shadow: 0 0 5px #ff0; 
 }
