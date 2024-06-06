@@ -8,7 +8,7 @@
     <link rel="icon" href="img/logoestacio.jpg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/14e67e3ac1.js" crossorigin="anonymous"></script>
 </head>
-<body id="body"> 
+<body> 
     <main>
         <!--Cabeçalho--> 
         <header>
@@ -28,111 +28,134 @@
                 </div>
             </div>
             
-           <!--Logo Principal-->
-      <div id="logo">
-                <!--Logo imgagem-->
+            <!--Logo-->
+            <div id="logo">
+                <!--Logo icone1-->
                 <div class="logo1"></div>
-                <!--Logo texto-->
+                <!--Logo texto2-->
                 <div class="logo2">Estacio Autos</div>
             </div>
             
             <!--Botão Login-->
             <div id="login">
                 <a href="login.html" class="link-login"><i class="fa-solid fa-circle-user"></i> Entre ou Cadastra-se</a>
-            </div>    
+            </div>   
+
         </header>
+        
+        <!--Linha Dividir Cabeçalho-->
+        <div class="linha"></div>
+
         <!--Navegaçao Veiculos-->
         <nav>
             <ul>
-                <li><a href="Suv.html" class="link-nav">Suv</a></li>
+                <li><a href="suv.html" class="link-nav">Suv</a></li>
                 <li><a href="sedan.html" class="link-nav">Sedan</a></li>
                 <li><a href="hatch.html" class="link-nav">Hatch</a></li>
                 <li><a href="pickup.html" class="link-nav">Pick-up</a></li>
                 <li><a href="sport.html" class="link-nav">Esportivo</a></li>
             </ul>
         </nav>
-      </div>
-        <!--Linha Dividir Cabeçalho-->
-        <div class="linha"></div>
-        <br>
-        <br>
-        <div id="suv">Veículos Pickups</div>
-        <br>
-        <br>
 
-         <!-- card fiat toro--> 
-        
-       <div class="container">
-           <span class="image"><img src="suv/honda_vermelho.jpg"></span> 
-               <h1>Veículo:Fiat Toro Ranch</h1>
-                  <p>Carro muito seguro, confontável e <br> 
-                    economico, por um preço acessível</p>
-                    <h2>5.300 kms rodado</h2>
-                    <h2>cor: Branco ano:2023/2024</h2>
-                    <h2> placa:SBH2C08</h2>
-                    <h2>Preço:R$ 179.900</h2>
-                  </div>
-              </div>
+        <!--Titulo do tipo de carro-->
+        <div id="titulo_tipo">
+           <div>Veículos Pick-up</div>
+        </div>
+        <!--Container de Carros-->
+        <div class="container">
+            <!--Fiat Toro Branco-->
+            <div class="card">
+                <img src="img/img pickup/Fiat_toro_Branca.png" alt="Fiat Toro Branco">
+                <div class="description">
+                    <h2>Veículo:Fiat Toro Ranch</h2>
+                    <p>Ano:2023/2024</p>
+                    <p>Cor: Branco</p>
+                    <p>Placa:SBH2C08</p>
+                    <p>Preço:R$ 179.900</p>
+                </div>
             </div>
-          
-          <!-- card chevrolet S10-->
-           <div class="container">
-             <span class="image"><img src="suv/jeep_preto2.jpg"></span>
-               <br>
-                 <h1>Chevrolet S10</h1>
-                   <p>Carro para todos os momentos<br> 
-                     desde a estrada, até trilhas</p>
-                        <h2>105.000 kms rodados<h2>
-                        <h2>cor: Branco ano:2017/2018</h2>
-                        <h2>placa:QEN7I13<h2></h2>
-                         <h2>Preço:R$ 128.000<h2>
-                     </div>
-                   </div>
-                   
-                
-           
+            <!--Jeep Preto-->
+            <div class="card">
+                <img src="img/img pickup/Chevrolet_S10_Branca.png" alt="Chevrolet S10">
+                <div class="description">
+                    <h2>Chevrolet S10</h2>
+                    <p>Ano:2017/2018</p>
+                    <p>Cor: Branco</p>
+                    <p>Placa: QEN7I13</p>
+                    <p>Preço:R$ 128.000</p>
+                </div>
+            </div>
+            
+            <!---->
+            <div class="card">
+                <img src="" alt="">
+                <div class="description">
+                    <h2></h2>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+
+            <!---->
+            <div class="card">
+                <img src="" alt="">
+                <div class="description">
+                    <h2></h2>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </main>
     <!--Ródape-->
     <footer>
-      <!--Rodapé parte 1-->
-      <div id="rodape1">
-        <div id="logo2">
-              <!-- Logo icone3 -->
-              <div class="logo3"></div>
-              <!-- Logo -->
-              <div class="logo4">Estacio Autos</div>
-          </div>
+        <!--Rodapé parte 1-->
+        <div id="rodape1">
+            <div id="logo2">
+                <!-- Logo icone3 -->
+                <div class="logo3"></div>
+                <!-- Logo texto4 -->
+                <div class="logo4">Estacio Autos</div>
+            </div>
+            <!--Links Rodapé-->
+            <div id="link-footer">
+                <ul>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
+                </ul>
+            </div>
 
-          <!--Links Rodapé-->
-          <div id="link-footer">
-              <ul>
-                  <li><a href="index.html" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
-                  <li><a href="faleconosco.html" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
-              </ul>
-          </div>
+            <!--Midia Rodapé-->
+            <div id="midia">
+                <ul>
+                    <li><a href="https://www.whatsapp.com/" target="_blank" class="link-what"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" class="link-face"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
 
-          <!--Midias-->
-          <div id="midia">
-              <ul>
-                  <li><a href="https://www.whatsapp.com/" target="_blank" class="link-what"><i class="fa-brands fa-whatsapp"></i></a></li>
-                  <li><a href="https://www.facebook.com/" target="_blank" class="link-face"><i class="fa-brands fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
-              </ul>
-          </div>
-      </div>
+        <!--Rodapé parte 2-->
+        <div id="rodape2">
+            <ul>
+                <li>Condições para uso</li>
+                <li>Política de Privacidade</li>
+                <li>Proteção de Dados</li>
+                <li>Contrato de licença</li>
+                <li>© 2024 Estacio Autos</li>
+            </ul>
+        </div>
+    </footer>
+        
+     <!--Java Script-->
+    <script src="js/script.js"></script>
+    
+</body>
+</html>
 
-      <!--Rodapé parte 2-->
-      <div id="rodape2">
-      <ul>
-              <li>Condições para uso</li>
-              <li>Política de Privacidade</li>
-              <li>Proteção de Dados</li>
-              <li>Contrato de licença</li>
-              <li>© 2024 Estacio Autos</li>
-          </ul>
-      </div>
-  </footer>
-
-      
-   <!--Java Script-->
-  <script src="js/script.js"></script>
+         
