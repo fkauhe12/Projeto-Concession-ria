@@ -8,7 +8,7 @@
     <link rel="icon" href="img/logoestacio.jpg" type="image/x-icon">
     <script src="https://kit.fontawesome.com/14e67e3ac1.js" crossorigin="anonymous"></script>
 </head>
-<body id="body"> 
+<body> 
     <main>
         <!--Cabeçalho--> 
         <header>
@@ -28,134 +28,132 @@
                 </div>
             </div>
             
-           <!--Logo Principal-->
-      <div id="logo">
-                <!--Logo imgagem-->
+            <!--Logo-->
+            <div id="logo">
+                <!--Logo icone1-->
                 <div class="logo1"></div>
-                <!--Logo texto-->
+                <!--Logo texto2-->
                 <div class="logo2">Estacio Autos</div>
             </div>
             
             <!--Botão Login-->
             <div id="login">
                 <a href="login.html" class="link-login"><i class="fa-solid fa-circle-user"></i> Entre ou Cadastra-se</a>
-            </div>    
+            </div>   
+
         </header>
+        
+        <!--Linha Dividir Cabeçalho-->
+        <div class="linha"></div>
+
         <!--Navegaçao Veiculos-->
         <nav>
             <ul>
-                <li><a href="Suv.html" class="link-nav">Suv</a></li>
+                <li><a href="suv.html" class="link-nav">Suv</a></li>
                 <li><a href="sedan.html" class="link-nav">Sedan</a></li>
                 <li><a href="hatch.html" class="link-nav">Hatch</a></li>
                 <li><a href="pickup.html" class="link-nav">Pick-up</a></li>
                 <li><a href="sport.html" class="link-nav">Esportivo</a></li>
             </ul>
         </nav>
-      </div>
-        <!--Linha Dividir Cabeçalho-->
-        <div class="linha"></div>
-        <br>
-        <br>
-        <div id="suv">Veículos SUV</div>
-        <br>
-        <br>
 
-         <!-- img card honda vermelho--> 
-        
-       <div class="container">
-           <span class="image"><img src="suv/honda_vermelho.jpg"></span> 
-               <h1>Veículo:Honda HR</h1>
-                  <p>Carro muito seguro, confontável e <br> 
-                    economico, por um preço acessível</p>
-                    <h2>87.900 kms rodado<h2>
-                    <h2>Cor:vermelho ano:2012/2013</h2>
-                    <h2>placa:FQP0794</h2>
-                    <h2>Preço:R$ 115.000<h2>
-                  </div>
-              </div>
-          </div>
-                        
-          <!-- card Jeep preto-->
-           <div class="container">
-             <span class="image"><img src="suv/jeep_preto2.jpg"></span>
-               <br>
-                 <h1>Veículo Jeep preto</h1>
-                   <p>Carro para todos os momentos<br> 
-                     desde a estrada, até trilhas</p>
-                     <h2>58.000 kms rodados<h2>
-                      <h2>Cor:preto ano:2017/2018</h2>
-                      <h2>placa:KYI8B18<h2></h2>
-                      <h2>Preço:R$ 140.000<h2>
-                     </div>
-                   </div>
-                    
-                <!-- card hyundai prata-->
-                   <div class="container">
-                     <span class="image"><img src="suv/hyundai_prata.jpg"></span>
-                       <br>
-                         <h1>Hyundai Prata</h1>
-                           <p>Veículo econômico e altamente<br> 
-                            robusto e estiloso </p>
-                              <h2>62.000 kms rodados<h2>
-                              <h2>Cor:prata ano:2015/2016</h2>
-                              <h2>placa:OIH0A01<h2></h2>
-                              <h2>Preço:R$ 100.000<h2>
-                            </div>
-                          </div>
+        <!--Titulo do tipo de carro-->
+        <div id="titulo_tipo">
+           <div>Veículos Sedan</div>
+        </div>
+        <!--Container de Carros-->
+        <div class="container">
+            <!--Toyota Corolla Prata-->
+            <div class="card">
+                <img src="img/img sedan/Corolla_prata.png" alt="Toyota Corolla Prata">
+                <div class="description">
+                    <h2>Toyota Corolla XEI</h2>
+                    <p>Ano: 2020/2021 </p>
+                    <p>Cor: Prata</p>
+                    <p>Placa: CTC8629</p>
+                    <p>Valor: $118.500</p>
+                </div>
+            </div>
+            <!--Mitsubishi Lancer Branco-->
+            <div class="card">
+                <img src="img/img sedan/Mitsubishi_Lancer_Branco.png" alt="Mitsubishi Lancer Branco">
+                <div class="description">
+                    <h2>Mitsubishi Lancer</h2>
+                    <p>Ano: 2013/2014</p>
+                    <p>Cor: Branco</p>
+                    <p>Placa: OSC3E32</p>
+                    <p>Valor: $58.000</p>
+                </div>
+            </div>
+            
+            <!--Volkswagen Virtus Prata-->
+            <div class="card">
+                <img src="img/img sedan/Volkswagen_Virtus_Prata.png" alt="Volkswagen Virtus Prata">
+                <div class="description">
+                    <h2>Volkswagen Virtus</h2>
+                    <p>Ano: 2021/2022</p>
+                    <p>Cor: Prata</p>
+                    <p>Placa: RIE3G04</p>
+                    <p>Valor: $89.900</p>
+                </div>
+            </div>
 
-           <div class="container">
-            <span class="image"><img src="suv/hilux_preta.jpg"></span>
-               <br>
-                 <h1>Hilux preta</h1>
-                   <p>Se você gosta de aventuras esse<br> 
-                   veículo é para você,muita força</p>
-                     <h2>45.000 kms rodados<h2>
-                     <h2>preto ano:2020/2021</h2>
-                     <h2>placa:FQP0794<h2></h2>
-                     <h2>Preço:R$ 306.000<h2>
-                  </div>
-                  </div>
-           
+            <!--Honda Civic LXR Prata-->
+            <div class="card">
+                <img src="img/img sedan/Honda_Civic_LXR_Prata.png" alt="Honda Civic LXR Prata">
+                <div class="description">
+                    <h2>Honda Civic LXR</h2>
+                    <p>Ano: 2013/2014</p>
+                    <p>Cor: Prata</p>
+                    <p>Placa: ORR4A64</p>
+                    <p>Valor: $64.900</p>
+                </div>
+            </div>
+        </div>
+    </main>
     <!--Ródape-->
     <footer>
-      <!--Rodapé parte 1-->
-      <div id="rodape1">
-        <div id="logo2">
-              <!-- Logo icone3 -->
-              <div class="logo3"></div>
-              <!-- Logo -->
-              <div class="logo4">Estacio Autos</div>
-          </div>
+        <!--Rodapé parte 1-->
+        <div id="rodape1">
+            <div id="logo2">
+                <!-- Logo icone3 -->
+                <div class="logo3"></div>
+                <!-- Logo texto4 -->
+                <div class="logo4">Estacio Autos</div>
+            </div>
+            <!--Links Rodapé-->
+            <div id="link-footer">
+                <ul>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
+                </ul>
+            </div>
 
-          <!--Links Rodapé-->
-          <div id="link-footer">
-              <ul>
-                  <li><a href="index.html" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
-                  <li><a href="faleconosco.html" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
-              </ul>
-          </div>
+            <!--Midia Rodapé-->
+            <div id="midia">
+                <ul>
+                    <li><a href="https://www.whatsapp.com/" target="_blank" class="link-what"><i class="fa-brands fa-whatsapp"></i></a></li>
+                    <li><a href="https://www.facebook.com/" target="_blank" class="link-face"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+            </div>
+        </div>
 
-          <!--Midias-->
-          <div id="midia">
-              <ul>
-                  <li><a href="https://www.whatsapp.com/" target="_blank" class="link-what"><i class="fa-brands fa-whatsapp"></i></a></li>
-                  <li><a href="https://www.facebook.com/" target="_blank" class="link-face"><i class="fa-brands fa-facebook"></i></a></li>
-                  <li><a href="https://www.instagram.com/" target="_blank" class="link-insta"><i class="fa-brands fa-instagram"></i></a></li>
-                  <li><a href="https://twitter.com/" target="_blank" class="link-twit"><i class="fa-brands fa-x-twitter"></i></a></li>
-              </ul>
-          </div>
-      </div>
+        <!--Rodapé parte 2-->
+        <div id="rodape2">
+            <ul>
+                <li>Condições para uso</li>
+                <li>Política de Privacidade</li>
+                <li>Proteção de Dados</li>
+                <li>Contrato de licença</li>
+                <li>© 2024 Estacio Autos</li>
+            </ul>
+        </div>
+    </footer>
+        
+     <!--Java Script-->
+    <script src="js/script.js"></script>
 
-      <!--Rodapé parte 2-->
-      <div id="rodape2">
-      <ul>
-              <li>Condições para uso</li>
-              <li>Política de Privacidade</li>
-              <li>Proteção de Dados</li>
-              <li>Contrato de licença</li>
-              <li>© 2024 Estacio Autos</li>
-          </ul>
-      </div>
-  </footer>
-      
-   <!--Java Script-->
+</body>
+</html>
