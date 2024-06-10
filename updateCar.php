@@ -1,12 +1,37 @@
 <?php 
-include './php/protect.php';
-require './php/config.php';
+    include './php/protect.php';
+    require './php/config.php';
+    $falha = "<br>";
 
-$sql_code = "SELECT * FROM carro";
-$sql_query = $conect->query($sql_code) or die("Falha na execução do código SQL: " . $conect->error);
+    if(!empty($_GET['id']))
+    {
+        $id = $_GET['id'];
 
-$carros = $sql_query->fetch_all();
+        $sql_code = "SELECT * FROM carro WHERE PLACA_CARRO = '$id'";
+        $sql_query = $conect->query($sql_code) or die("Falha na execução do código SQL: " . $conect->error);
 
+        if($sql_query->num_rows > 0)
+        {
+            while($carro_data = mysqli_fetch_assoc($sql_query))
+            {
+                $modelo = $carro_data['MODELO_CARRO'];
+                $categoria = $carro_data['TIPO_CARRO'];
+                $cor = $carro_data['COR_CARRO'];
+                $ano = $carro_data['ANO_CARRO'];
+                $preco = $carro_data['PRECO_CARRO'];
+                $quilometragem = $carro_data['QUILOMETRAGEM_CARRO'];
+                $placa = $carro_data['PLACA_CARRO'];
+            }
+        }
+        else
+        {
+            header('Location: sistema.php');
+        }
+    }
+    else
+    {
+        header('Location: sistema.php');
+    }
 ?>
 
 <!DOCTYPE html>
@@ -57,51 +82,45 @@ $carros = $sql_query->fetch_all();
         <!--Linha Dividir Cabeçalho-->
         <div class="linha"></div>
 
-        <!--Navegaçao Veiculos-->
-        <nav>
-            <ul>
-                <li><a href="suv.html" class="link-nav">Suv</a></li>
-                <li><a href="sedan.html" class="link-nav">Sedan</a></li>
-                <li><a href="hatch.html" class="link-nav">Hatch</a></li>
-                <li><a href="pickup.html" class="link-nav">Pick-up</a></li>
-                <li><a href="sport.html" class="link-nav">Esportivo</a></li>
-            </ul>
-        </nav>
-
-        <!--Titulo do tipo de carro-->
-        <div id="titulo_tipo">
-            <div>Veículos</div>
-        </div>
-
-        <!--Container de Carros-->
-        <div class="container">
-            <!--BYD Dolphin Prata-->
-
-            <?php 
-            foreach($carros as $carro): 
-                echo '
-                <div class="card">
-                    <img src="img/img hatch/BYD_Dolphin_Prata.png" alt="BYD Dolphin Prata">
-                    <div class="description">
-                        <h2>'.$carro[0].'</h2>
-                        <p>Categoria: '.$carro[1].'</p>
-                        <p>Cor: '.$carro[2].'</p>
-                        <p>Ano: '.$carro[3].'</p>
-                        <p>Preço: R$'.$carro[4].'</p>
-                        <p>Km: '.$carro[5].'</p>
-                        <p class="editar">
-                        <a href="/updateCar.php?id='.$carro[6].'" class="none">&#9998;</a> - 
-                        <a href="/delete.php?id='.$carro[6].'" class="none">&#10007;</a>
-                        </p>
-                        
+        <!--Conteúdo Login-->
+        <div class="login-box">
+            <div class="form-box">
+                <h2>Adicionar Veículo</h2>
+                <hr class="second">
+                <form action="saveUpdateCar.php" method="POST">
+                    <div class="input-box">
+                        <Label for="modelo">Modelo do veículo:</Label>
+                        <input type="text" name="modelo" value="<?php echo $modelo;?>" require>
                     </div>
-                </div>';
-            endforeach;
-            ?>;
-
-            <!--Adicionar-->
-            <div class="card">
-                <a href="insertCar.php" class="none adicionar_veiculo">&#10010;</a>
+                    <div class="input-box">
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" name="categoria" value="<?php echo $categoria;?>" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="cor">Cor:</label>
+                        <input type="text" name="cor" value="<?php echo $cor;?>" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="ano">Ano:</label>
+                        <input type="number" name="ano" value="<?php echo $ano;?>" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="preco">Preço:</label>
+                        <input type="number" name="preco" value="<?php echo $preco;?>" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="quilometragem">Quilometragem:</label>
+                        <input type="number" name="quilometragem" value="<?php echo $quilometragem;?>" require>
+                    </div>
+                    <div class="input-box invisivel">
+                        <label for="placa">Placa:</label>
+                        <input type="number" name="placa" value="<?php echo $placa;?>">
+                    </div>
+                    <?php echo '<div class="statusLogin">'.$falha.'<div>';?>
+                    <div class="input-box">
+                        <input type="submit" name="update" value="&#10010;" class="input-button">
+                    </div>
+                </form>
             </div>
         </div>
     </main>
