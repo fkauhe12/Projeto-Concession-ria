@@ -114,7 +114,7 @@
                     </div>
                     <div class="input-box invisivel">
                         <label for="placa">Placa:</label>
-                        <input type="number" name="placa" value="<?php echo $placa;?>">
+                        <input type="text" name="placa" value="<?php echo $placa;?>">
                     </div>
                     <?php echo '<div class="statusLogin">'.$falha.'<div>';?>
                     <div class="input-box">

@@ -10,8 +10,7 @@
         $quilometragem = $_POST['quilometragem'];
         $placa = $_POST['placa'];
         
-        echo $placa."<br>";
-        var_dump($placa);
+        //var_dump($placa);
 
         $modeloValidate = htmlspecialchars($modelo, ENT_QUOTES);
         $categoriaValidate = htmlspecialchars($categoria, ENT_QUOTES);
@@ -34,6 +33,6 @@
 
         $resultUpdate = $conect->query($sqlUpdate);
     }
-    
+
     header('Location: sistema.php');
 ?>
