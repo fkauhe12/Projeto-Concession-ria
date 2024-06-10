@@ -1,3 +1,14 @@
+<?php 
+include 'protect.php';
+require 'config.php';
+
+$sql_code = "SELECT * FROM carro";
+$sql_query = $conect->query($sql_code) or die("Falha na execução do código SQL: " . $conect->error);
+
+$carros = $sql_query->fetch_all();
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -22,7 +33,7 @@
                 <div id="menu-itens">
                     <ul>     
                         <li><a href="index.html" class="link-menu" ><i class="fa-solid fa-house"></i> Home</a></li>
-                        <li><a href="login.html" class="link-menu" ><i class="fa-solid fa-circle-user"></i> Login</a></li>
+                        <li><a href="logout.php" class="link-menu" ><i class="fa-solid fa-circle-user"></i> Logout</a></li>
                         <li><a href="faleconosco.html" class="link-menu" ><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
                     </ul>
                 </div>
@@ -38,7 +49,8 @@
             
             <!--Botão Login-->
             <div id="login">
-            <!--Tiago-->    
+                <a href="#" class="link-login"><i class="fa-solid fa-circle-user"></i> <?php echo $_SESSION['nome']; ?> </a>
+                <a href="logout.php" class="link-login"> - Sair</a>
             </div>    
         </header>
         
@@ -56,40 +68,19 @@
             </ul>
         </nav>
 
-        <!--Conteúdo Login-->
-            <div class="login-box">
-                <div class="form-box">
-                    <h2>Login</h2><hr class="second">
-                        <form>
-                            <div class="input-box">
-                                <span>E-mail</span>
-                                <input type="email" placeholder="email@.com">
-                            </div>
-    
-                            <div class="input-box">
-                                <span>Senha</span>
-                                <input type="password" placeholder="Senha">
-                            </div>
-    
-                            <div class="lembrar">
-                                <label>
-                                    <input type="checkbox"> Lembrar de mim
-                                </label>
-                                <a href="#">Esqueceu a Senha?</a>
-                            </div>
-    
-                            <div class="input-box">
-                                <input type="submit" value="Entrar">
-                            </div>
-                                
-                            <div class="inscrever">
-                                <p>Não tem uma conta? <a href="##">Inscrever-se</a></p>
-                            </div>
-                        </form>
-                </div>
-            </div>
+        <!--Conteúdo-->
+        <aside>  
+            <!--Box esquerda informações-->
+            <section>
+                <div class="titulo-veiculo">Novidades</div>
+                <div class="descricao-veiculo">O Toyota Hilux SW4 é um SUV robusto e versátil, baseado na Pick-up Toyota Hilux. Reconhecido por sua durabilidade e confiabilidade, é ideal tanto para uso urbano quanto para aventuras off-road.Portanto,Além da sua robustez possui conforto e sofisticação de um SUV de alta gama, sendo uma escolha excelente para quem busca um veículo versátil e confiável.</div>
+            </section>
+            <!--Box direita imagem-->
+            <article>
+                <a href=""><img src="img/img suv/hilux_preta.png" alt="Novidade Hilux" class="img-hilux"></a>
+            </article>
+        </aside>
     </main>
-    
     <!--Ródape-->
     <footer>
         <!--Rodapé parte 1-->
@@ -104,11 +95,11 @@
             <!--Links Rodapé-->
             <div id="link-footer">
                 <ul>
-                    <li><a href="" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="index.html" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="faleconosco.html" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
                 </ul>
             </div>
-
+            
             <!--Midias-->
             <div id="midia">
                 <ul>
@@ -119,7 +110,6 @@
                 </ul>
             </div>
         </div>
-
         <!--Rodapé parte 2-->
         <div id="rodape2">
             <ul>
@@ -130,10 +120,9 @@
                 <li>© 2024 Estacio Autos</li>
             </ul>
         </div>
-    </footer>
         
+    </footer>  
      <!--Java Script-->
     <script src="js/script.js"></script>
-
 </body>
 </html>

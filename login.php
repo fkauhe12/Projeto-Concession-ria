@@ -1,3 +1,43 @@
+<?php
+include('config.php');
+
+if(isset($_POST['email']) || isset($_POST['senha'])) {
+
+    if(strlen($_POST['email']) == 0) {
+        echo "Preencha seu e-mail";
+    } else if(strlen($_POST['senha']) == 0) {
+        echo "Preencha sua senha";
+    } else {
+
+        $email = $conect->real_escape_string($_POST['email']);
+        $senha = $conect->real_escape_string($_POST['senha']);
+
+        $sql_code = "SELECT * FROM vendedor WHERE EMAIL_VENDEDOR = '$email' AND SENHA_VENDEDOR = '$senha'";
+        $sql_query = $conect->query($sql_code) or die("Falha na execução do código SQL: " . $conect->error);
+
+        $quantidade = $sql_query->num_rows;
+
+        if($quantidade == 1) {
+            
+            $usuario = $sql_query->fetch_assoc();
+
+            if(!isset($_SESSION)) {
+                session_start();
+            }
+
+            $_SESSION['nome'] = $usuario['NOME_VENDEDOR'];
+
+            header("Location: sistema.php");
+
+        } else {
+            $falha = "Falha ao logar! E-mail ou senha incorretos";
+        }
+
+    }
+
+}
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -38,7 +78,7 @@
             
             <!--Botão Login-->
             <div id="login">
-                <a href="login.php" class="link-login"><i class="fa-solid fa-circle-user"></i> Entre ou Cadastra-se</a>
+            <!--Tiago-->    
             </div>    
         </header>
         
@@ -56,19 +96,40 @@
             </ul>
         </nav>
 
-        <!--Conteúdo-->
-        <aside>  
-            <!--Box esquerda informações-->
-            <section>
-                <div class="titulo-veiculo">Novidades</div>
-                <div class="descricao-veiculo">O Toyota Hilux SW4 é um SUV robusto e versátil, baseado na Pick-up Toyota Hilux. Reconhecido por sua durabilidade e confiabilidade, é ideal tanto para uso urbano quanto para aventuras off-road.Portanto,Além da sua robustez possui conforto e sofisticação de um SUV de alta gama, sendo uma escolha excelente para quem busca um veículo versátil e confiável.</div>
-            </section>
-            <!--Box direita imagem-->
-            <article>
-                <a href=""><img src="img/img suv/hilux_preta.png" alt="Novidade Hilux" class="img-hilux"></a>
-            </article>
-        </aside>
+        <!--Conteúdo Login-->
+            <div class="login-box">
+                <div class="form-box">
+                    <h2>Login</h2><hr class="second">
+                        <form action="" method="POST">
+                            <div class="input-box">
+                                <span>E-mail</span>
+                                <input type="email" name="email" placeholder="email@.com">
+                            </div>
+    
+                            <div class="input-box">
+                                <span>Senha</span>
+                                <input type="password" name="senha" placeholder="Senha">
+                            </div>
+    
+                            <div class="lembrar">
+                                <label>
+                                    <input type="checkbox"> Lembrar de mim
+                                </label>
+                                <a href="#">Esqueceu a Senha?</a>
+                            </div>
+    
+                            <div class="input-box">
+                                <input type="submit" value="Entrar">
+                            </div>
+                                
+                            <div class="inscrever">
+                                <p>Não tem uma conta? <a href="##">Inscrever-se</a></p>
+                            </div>
+                        </form>
+                </div>
+            </div>
     </main>
+    
     <!--Ródape-->
     <footer>
         <!--Rodapé parte 1-->
@@ -83,11 +144,11 @@
             <!--Links Rodapé-->
             <div id="link-footer">
                 <ul>
-                    <li><a href="index.html" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
+                    <li><a href="" class="link-footer"><i class="fa-solid fa-house"></i> Home</a></li>
                     <li><a href="faleconosco.html" class="link-footer"><i class="fa-solid fa-phone"></i> Fale Conosco</a></li>
                 </ul>
             </div>
-            
+
             <!--Midias-->
             <div id="midia">
                 <ul>
@@ -98,6 +159,7 @@
                 </ul>
             </div>
         </div>
+
         <!--Rodapé parte 2-->
         <div id="rodape2">
             <ul>
@@ -108,9 +170,10 @@
                 <li>© 2024 Estacio Autos</li>
             </ul>
         </div>
+    </footer>
         
-    </footer>  
      <!--Java Script-->
     <script src="js/script.js"></script>
+
 </body>
 </html>
