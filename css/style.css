@@ -56,6 +56,18 @@ header {
     color: red;
 }
 
+/*Links Home*/
+.link-home {
+    text-decoration: none;
+    color: black;
+}
+
+/*Botão enviar*/
+
+.input-button {
+    cursor: pointer;
+}
+
 /*Links Menu*/
 .link-menu {
     cursor: pointer;

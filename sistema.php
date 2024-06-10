@@ -1,6 +1,6 @@
 <?php 
-include 'protect.php';
-require 'config.php';
+include './php/protect.php';
+require './php/config.php';
 
 $sql_code = "SELECT * FROM carro";
 $sql_query = $conect->query($sql_code) or die("Falha na execução do código SQL: " . $conect->error);
@@ -42,9 +42,9 @@ $carros = $sql_query->fetch_all();
             <!--Logo Principal-->
             <div id="logo">
                 <!--Logo imgagem-->
-                <div class="logo1"></div>
+                <a href="sistema.php" class="link-home"><div class="logo1"></div></a>
                 <!--Logo texto-->
-                <div class="logo2">Estacio Autos</div>
+                <div class="logo2"><a href="sistema.php" class="link-home">Estacio Autos</a></div>
             </div>
             
             <!--Botão Login-->

@@ -1,5 +1,5 @@
 <?php
-include('config.php');
+include('./php/config.php');
 
 if(isset($_POST['email']) || isset($_POST['senha'])) {
 
@@ -119,7 +119,7 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
                             </div>
     
                             <div class="input-box">
-                                <input type="submit" value="Entrar">
+                                <input type="submit" value="Entrar" class="input-button">
                             </div>
                                 
                             <div class="inscrever">
