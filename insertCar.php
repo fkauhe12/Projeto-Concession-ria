@@ -1,12 +1,36 @@
 <?php 
-include './php/protect.php';
-require './php/config.php';
+    include './php/protect.php';
+    require './php/config.php';
+    $falha = "<br>";
 
-$sql_code = "SELECT * FROM carro";
-$sql_query = $conect->query($sql_code) or die("Falha na execução do código SQL: " . $conect->error);
+    if(isset($_POST['enviar']))
+        {
+            $modelo = $_POST['modelo'];
+            $categoria = $_POST['categoria'];
+            $cor = $_POST['cor'];
+            $ano = $_POST['ano'];
+            $preco = $_POST['preco'];
+            $quilometragem = $_POST['quilometragem'];
+            $placa = $_POST['placa'];
 
-$carros = $sql_query->fetch_all();
+            $modeloValidate = htmlspecialchars($modelo, ENT_QUOTES);
+            $categoriaValidate = htmlspecialchars($categoria, ENT_QUOTES);
+            $corValidate = htmlspecialchars($cor, ENT_QUOTES);
+            $anoValidate = htmlspecialchars($ano, ENT_QUOTES);
+            $precoValidate = htmlspecialchars($preco, ENT_QUOTES);
+            $quilometragemValidate = htmlspecialchars($quilometragem, ENT_QUOTES);
+            $placaValidate = htmlspecialchars($placa, ENT_QUOTES);
 
+            if ($modelo === '' or $categoria === '' or $cor === '' or $ano === '' or $preco === '' or $quilometragem === '' or $placa === '') {
+                $falha = "Preencha todos os campos!";
+            } else {
+                $resultInsert = mysqli_query($conect, "INSERT 
+                INTO `lojacarro`.`carro` (`MODELO_CARRO`, `TIPO_CARRO`, `COR_CARRO`, `ANO_CARRO`, `PRECO_CARRO`, `QUILOMETRAGEM_CARRO`, `PLACA_CARRO`)
+                VALUES ('$modeloValidate','$categoriaValidate','$corValidate',$anoValidate,$precoValidate,$quilometragemValidate,'$placaValidate')");
+
+                header('Location: sistema.php');
+            }
+        }
 ?>
 
 <!DOCTYPE html>
@@ -57,51 +81,46 @@ $carros = $sql_query->fetch_all();
         <!--Linha Dividir Cabeçalho-->
         <div class="linha"></div>
 
-        <!--Navegaçao Veiculos-->
-        <nav>
-            <ul>
-                <li><a href="suv.html" class="link-nav">Suv</a></li>
-                <li><a href="sedan.html" class="link-nav">Sedan</a></li>
-                <li><a href="hatch.html" class="link-nav">Hatch</a></li>
-                <li><a href="pickup.html" class="link-nav">Pick-up</a></li>
-                <li><a href="sport.html" class="link-nav">Esportivo</a></li>
-            </ul>
-        </nav>
-
-        <!--Titulo do tipo de carro-->
-        <div id="titulo_tipo">
-            <div>Veículos</div>
-        </div>
-
-        <!--Container de Carros-->
-        <div class="container">
-            <!--BYD Dolphin Prata-->
-
-            <?php 
-            foreach($carros as $carro): 
-                echo '
-                <div class="card">
-                    <img src="img/img hatch/BYD_Dolphin_Prata.png" alt="BYD Dolphin Prata">
-                    <div class="description">
-                        <h2>'.$carro[0].'</h2>
-                        <p>Categoria: '.$carro[1].'</p>
-                        <p>Cor: '.$carro[2].'</p>
-                        <p>Ano: '.$carro[3].'</p>
-                        <p>Preço: R$'.$carro[4].'</p>
-                        <p>Km: '.$carro[5].'</p>
-                        <p class="editar">
-                        <a href="/edit.php?id=$carro[6]" class="none">&#9998;</a> - 
-                        <a href="/delete.php?id='.$carro[6].'" class="none">&#10007;</a>
-                        </p>
-                        
+        <!--Conteúdo Login-->
+        <div class="login-box">
+            <div class="form-box">
+                <h2>Adicionar Veículo</h2>
+                <hr class="second">
+                <form action="" method="POST">
+                    <div class="input-box">
+                        <Label for="modelo">Modelo do veículo:</Label>
+                        <input type="text" name="modelo" require>
                     </div>
-                </div>';
-            endforeach;
-            ?>;
+                    <div class="input-box">
+                        <label for="categoria">Categoria:</label>
+                        <input type="text" name="categoria" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="cor">Cor:</label>
+                        <input type="text" name="cor" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="ano">Ano:</label>
+                        <input type="number" name="ano" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="preco">Preço:</label>
+                        <input type="number" name="preco" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="quilometragem">Quilometragem:</label>
+                        <input type="number" name="quilometragem" require>
+                    </div>
+                    <div class="input-box">
+                        <label for="placa">Placa:</label>
+                        <input type="text" name="placa" require>
+                    </div>
 
-            <!--Adicionar-->
-            <div class="card">
-                <a href="insertCar.php" class="none adicionar_veiculo">&#10010;</a>
+                    <?php echo '<div class="statusLogin">'.$falha.'<div>';?>
+                    <div class="input-box">
+                        <input type="submit" name="enviar" value="&#10010;" class="input-button">
+                    </div>
+                </form>
             </div>
         </div>
     </main>

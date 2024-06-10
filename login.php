@@ -1,12 +1,13 @@
 <?php
 include('./php/config.php');
 
+$falha = "";
 if(isset($_POST['email']) || isset($_POST['senha'])) {
 
     if(strlen($_POST['email']) == 0) {
-        echo "Preencha seu e-mail";
+        $falha = "Preencha seu e-mail";
     } else if(strlen($_POST['senha']) == 0) {
-        echo "Preencha sua senha";
+        $falha = "Preencha sua senha";
     } else {
 
         $email = $conect->real_escape_string($_POST['email']);
@@ -71,9 +72,9 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
             <!--Logo Principal-->
             <div id="logo">
                 <!--Logo imgagem-->
-                <div class="logo1"></div>
+                <a href="index.html" class="link-home"><div class="logo1"></div></a>
                 <!--Logo texto-->
-                <div class="logo2">Estacio Autos</div>
+                <div class="logo2"><a href="index.html" class="link-home">Estacio Autos</a></div>
             </div>
             
             <!--Botão Login-->
@@ -85,49 +86,40 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
         <!--Linha Dividir Cabeçalho-->
         <div class="linha"></div>
 
-        <!--Navegaçao Veiculos-->
-        <nav>
-            <ul>
-                <li><a href="suv.html" class="link-nav">Suv</a></li>
-                <li><a href="sedan.html" class="link-nav">Sedan</a></li>
-                <li><a href="hatch.html" class="link-nav">Hatch</a></li>
-                <li><a href="pickup.html" class="link-nav">Pick-up</a></li>
-                <li><a href="sport.html" class="link-nav">Esportivo</a></li>
-            </ul>
-        </nav>
+        <br><br>
 
         <!--Conteúdo Login-->
-            <div class="login-box">
-                <div class="form-box">
-                    <h2>Login</h2><hr class="second">
-                        <form action="" method="POST">
-                            <div class="input-box">
-                                <span>E-mail</span>
-                                <input type="email" name="email" placeholder="email@.com">
-                            </div>
-    
-                            <div class="input-box">
-                                <span>Senha</span>
-                                <input type="password" name="senha" placeholder="Senha">
-                            </div>
-    
-                            <div class="lembrar">
-                                <label>
-                                    <input type="checkbox"> Lembrar de mim
-                                </label>
-                                <a href="#">Esqueceu a Senha?</a>
-                            </div>
-    
-                            <div class="input-box">
-                                <input type="submit" value="Entrar" class="input-button">
-                            </div>
-                                
-                            <div class="inscrever">
-                                <p>Não tem uma conta? <a href="##">Inscrever-se</a></p>
-                            </div>
-                        </form>
-                </div>
+        <div class="login-box">
+            <div class="form-box">
+                <h2>Login</h2><hr class="second">
+                    <form action="" method="POST">
+                        <div class="input-box">
+                            <span>E-mail</span>
+                            <input type="email" name="email" placeholder="email@.com" require>
+                        </div>
+
+                        <div class="input-box">
+                            <span>Senha</span>
+                            <input type="password" name="senha" placeholder="Senha" require>
+                        </div>
+
+                        <div class="lembrar">
+                            <label>
+                                <input type="checkbox"> Lembrar de mim
+                            </label>
+                            <a href="#">Esqueceu a Senha?</a>
+                        </div>
+                        <?php echo '<div class="statusLogin">'.$falha.'<div>';?>
+                        <div class="input-box">
+                            <input type="submit" value="Entrar" class="input-button">
+                        </div>
+                            
+                        <div class="inscrever">
+                            <p>Não tem uma conta? <a href="##">Inscrever-se</a></p>
+                        </div>
+                    </form>
             </div>
+        </div>
     </main>
     
     <!--Ródape-->

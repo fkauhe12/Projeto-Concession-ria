@@ -57,13 +57,29 @@ header {
 }
 
 /*Links Home*/
-.link-home {
+.link-home, .none {
     text-decoration: none;
     color: black;
 }
 
-/*Botão enviar*/
+/*Texto status do login*/
 
+.statusLogin {
+    color: #fd1d1d;
+}
+
+.center {
+    width: 30%;
+    box-shadow: 0 0 10px white;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    background-color: rgba(0, 0, 0, 0.80);
+    margin-top: 2%;
+    cursor: pointer;
+    margin: 0 auto;
+}
+
+/*Botão enviar*/
 .input-button {
     cursor: pointer;
 }
@@ -409,7 +425,7 @@ footer {
     margin: 4% auto;
     background-color: rgba(0, 0, 0, 0.80);   
     border-radius: 20px;
-    height: 55vh;
+    min-height: 55vh;
     user-select: none;
 }
 
@@ -442,12 +458,18 @@ footer {
     color: rgb(104, 104, 104);
 }
 
-.login-box .form-box .input-box span{
+.login-box .form-box .input-box span {
     font-size: 17px;
     color: white;
     margin-bottom: 5px;
     font-weight: 400;
-    
+}
+
+label {
+    font-size: 17px;
+    color: white;
+    margin-bottom: 5px;
+    font-weight: 400;
 }
 
 .login-box .form-box .lembrar{
