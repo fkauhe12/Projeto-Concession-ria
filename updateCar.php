@@ -1,6 +1,6 @@
 <?php 
-    include './php/protect.php';
-    require './php/config.php';
+    include '/php/protect.php';
+    require '/php/config.php';
     $falha = "<br>";
 
     if(!empty($_GET['id']))

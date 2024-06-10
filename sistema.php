@@ -1,6 +1,6 @@
 <?php 
-include './php/protect.php';
-require './php/config.php';
+include '/php/protect.php';
+require '/php/config.php';
 
 $sql_code = "SELECT * FROM carro";
 $sql_query = $conect->query($sql_code) or die("Falha na execução do código SQL: " . $conect->error);
