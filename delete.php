@@ -1,7 +1,7 @@
 <?php
     if(!empty($_GET['id']))
     {
-        include_once('/php/config.php');
+        include_once('./php/config.php');
 
         $placa = $_GET['id'];
         

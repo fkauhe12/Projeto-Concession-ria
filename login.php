@@ -1,5 +1,5 @@
 <?php
-include('php/config.php');
+include('./php/config.php');
 
 $falha = '';
 if(isset($_POST['email']) || isset($_POST['senha'])) {
@@ -7,14 +7,14 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
     if(strlen($_POST['email']) == 0) {
         $falha = 'Preencha seu e-mail';
     } else if(strlen($_POST['senha']) == 0) {
-        $falha = 'Preencha sua senha';
+        $falha = "Preencha sua senha";
     } else {
 
         $email = $conect->real_escape_string($_POST['email']);
         $senha = $conect->real_escape_string($_POST['senha']);
 
-        $sql_code = 'SELECT * FROM vendedor WHERE EMAIL_VENDEDOR = '.$email.' AND SENHA_VENDEDOR = '.$senha;
-        $sql_query = $conect->query($sql_code) or die('Falha na execução do código SQL: '. $conect->error);
+        $sql_code = "SELECT * FROM vendedor WHERE EMAIL_VENDEDOR = '$email' AND SENHA_VENDEDOR = '$senha'";
+        $sql_query = $conect->query($sql_code) or die("Falha na execução do código SQL: " . $conect->error);
 
         $quantidade = $sql_query->num_rows;
 
@@ -28,10 +28,10 @@ if(isset($_POST['email']) || isset($_POST['senha'])) {
 
             $_SESSION['nome'] = $usuario['NOME_VENDEDOR'];
 
-            header('Location: sistema.php');
+            header("Location: sistema.php");
 
         } else {
-            $falha = 'Falha ao logar! E-mail ou senha incorretos';
+            $falha = "Falha ao logar! E-mail ou senha incorretos";
         }
 
     }
